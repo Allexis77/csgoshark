@@ -1,0 +1,148 @@
+.modal_change
+	max-width: 920px
+
+	& .center-content__box-item::before
+		content: ''
+		background: #17182e
+		border: 1px solid #303152
+		width: 35px
+		height: 35px
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		-webkit-box-pack: center
+		-ms-flex-pack: center
+		justify-content: center
+		-webkit-box-align: center
+		-ms-flex-align: center
+		align-items: center
+		border-radius: 50%
+		position: absolute
+		right: 3%
+		top: 3%
+		color: #fff
+		z-index: 10
+	& .center-content__box-item-active::before
+		content: ''
+		background: #eb01a5
+		background-image: url(../img/svg/done-icon.svg)
+		background-image: url(../img/svg/done-icon.svg), -webkit-gradient(linear, left top, right top, color-stop(3.57%, #0085ff), color-stop(95.71%, #00d3ff))
+		background-image: url(../img/svg/done-icon.svg), -o-linear-gradient(left, #0085ff 3.57%, #00d3ff 95.71%)
+		background-image: url(../img/svg/done-icon.svg), linear-gradient(90deg, #0085ff 3.57%, #00d3ff 95.71%)
+		background-repeat: no-repeat
+		background-position: center
+
+
+.modal
+	&__change
+		&_btn
+			margin: 0 auto
+			background: linear-gradient(90deg, rgba(0, 211, 255, 0.25) 0%, rgba(0, 211, 255, 0) 50.33%, rgba(0, 211, 255, 0.25) 98.61%)
+			color: #fff
+			border-color: #00D3FF
+			text-transform: unset
+			letter-spacing: 1px
+		&__info
+			&-wrapper
+				display: flex
+				width: 100%
+				justify-content: space-between
+			&__select
+				& .modal__change__info__value
+					color: #00D3FF !important
+			&__title
+				margin-bottom: 3px
+				color: #404161
+				font-size: 12px
+				text-transform: uppercase
+			&__value
+				color: #fff
+				font-size: 18px
+		&__top
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+		&__right
+			&__info
+				width: 140px
+				display: flex
+				justify-content: space-between
+				align-items: center
+				padding: 0 25px
+				box-sizing: border-box
+				margin-left: auto
+				margin-right: 35px
+		&__left
+			&__info
+				width: 250px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding: 0 34px
+				box-sizing: border-box
+				position: relative
+				margin-left: 60px
+				&:after
+					content: ''
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					width: 1px
+					height: 35px
+					background: #1E1F3C
+		&__left, &__right
+			&__info
+				background: #111225
+				box-shadow: 0px 15px 45px rgba(14, 12, 23, 0.25)
+				border-radius: 4px
+				height: 65px
+
+@media (max-width: 674px)
+	.modal__change__info-wrapper
+		flex-direction: column
+		align-items: center
+	.modal__change__left__info, .modal__change__right__info
+		margin: 0
+	.modal__change__right__info
+		margin-top: 10px
+
+@media (max-width: 660px)
+	.modal_change
+		max-width: 96%
+
+@media (max-width: 510px)
+	.modal__change__top
+		flex-direction: column
+	.modal_change .modal__title
+		margin-right: auto
+	.modal_change .modal__close
+		position: absolute
+		top: 50px
+		right: 35px
+
+
+body.is-white .modal_change
+	background: #fff
+	& .modal__change__left__info, .modal__change__right__info
+		background: #fbfbfb
+	& .modal__change__info__value
+		color: #000
+	& .modal__change__left__info, .modal__change__right__info
+		box-shadow: rgb(232, 229, 248) 0px 0px 25px
+	& .center-content__box-item::before
+		background: #fbfbfb
+		border-color: #00d3ff
+	& .center-content__box-item-active::before
+		content: ''
+		background: #eb01a5
+		background-image: url(../img/svg/done-icon.svg)
+		background-image: url(../img/svg/done-icon.svg), -webkit-gradient(linear, left top, right top, color-stop(3.57%, #0085ff), color-stop(95.71%, #00d3ff))
+		background-image: url(../img/svg/done-icon.svg), -o-linear-gradient(left, #0085ff 3.57%, #00d3ff 95.71%)
+		background-image: url(../img/svg/done-icon.svg), linear-gradient(90deg, #0085ff 3.57%, #00d3ff 95.71%)
+		background-repeat: no-repeat
+		background-position: center
+	& .modal__change_btn
+		background: #3d3e62
+		border-color: #3d3e62
+		&:after
+			display: none

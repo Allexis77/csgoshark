@@ -1,0 +1,121 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "selectric";
+@import "scroll.css";
+@import "nouislider.css";
+
+@import "components/sidebar";
+@import "components/center-content";
+@import "components/navigation";
+@import "components/accordion";
+@import "components/modal";
+@import "components/change_modal";
+@import "components/pagination";
+@import "components/page";
+
+@import "white/white_theme.sass"
+
+.block__arrow
+	position: absolute
+	background: url('../img/svg/block-arrow.svg') no-repeat
+	width: 35px
+	height: 35px
+	top: 0
+	left: 0
+	background-position: -25px
+	background-position-y: -25px
+	overflow: hidden
+	&_rightTop
+		right: 0
+		left: auto
+		transform: rotate(90deg)
+	&_leftBottom
+		bottom: 0
+		top: auto
+		transform: rotate(-90deg)
+	&_rightBottom
+		bottom: 0
+		right: 0
+		left: auto
+		top: auto
+		transform: rotate(180deg)
+
+body
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.left-sidebar, .right-sidebar__chat-bottom, .right-sidebar__inventory-bottom__wrapper
+	overflow: auto !important
+
+.right-sidebar__chat-bottom::-webkit-scrollbar
+  width: 7px
+  height: 7px
+  background-color: #2c3053
+  border-radius: 100px
+
+.right-sidebar__chat-bottom::-webkit-scrollbar-thumb
+  background-color: #444978
+  border-radius: 100px
+
+.right-sidebar__chat-bottom::-webkit-scrollbar-corner
+	background-color: transparent
+.right-sidebar__inventory-bottom__wrapper::-webkit-scrollbar
+  width: 7px
+  height: 7px
+  background-color: #2c3053
+  border-radius: 100px
+
+.right-sidebar__inventory-bottom__wrapper::-webkit-scrollbar-thumb
+  background-color: #444978
+  border-radius: 100px
+
+.right-sidebar__inventory-bottom__wrapper::-webkit-scrollbar-corner
+	background-color: transparent
+
+.left-sidebar::-webkit-scrollbar
+  width: 7px
+  height: 7px
+  background-color: #2c3053
+  border-radius: 100px
+
+.left-sidebar::-webkit-scrollbar-thumb
+  background-color: #444978
+  border-radius: 100px
+
+.left-sidebar::-webkit-scrollbar-corner
+	background-color: transparent
+
+.hidden__show__btn
+	position: absolute
+	top: 112px
+	transform: rotate(180deg)
+	display: none
+	right: 17px
+
+.center-content
+    width: calc(100% - 1014px)
+
+@media screen and ( max-width: 1605px )
+	.center-content
+		width: calc(100% - 534px)
+
+@media screen and ( max-width: 990px )
+	.center-content
+		width: 100%
+		box-sizing: border-box
+
+@import "media";
+
+.game-items
+	display: none
+
+.game-items_active
+	display: block
+
+@media (max-width: 768px)
+	.center-content
+		overflow-x: unset

@@ -1,0 +1,332 @@
+.top-bar_mobile__logo a
+	overflow: unset !important
+
+.top-bar_mobile, .personal-data_mobile
+	display: none
+body.is-white .win__regime-visible
+	right: 30px
+
+.right-sidebar__noauthorize
+	margin-bottom: 40px
+
+.top-bar_modile__left
+	display: flex
+	align-items: center
+
+@media (max-height: 900px)
+	.right-sidebar__chat-send textarea
+		margin-top: 0px !important
+		margin-bottom: 15px
+	.right-sidebar__chat-send button
+		top: calc(50% - 10px)
+@media (max-width: 1800px)
+	.nav
+		overflow-x: visible
+		overflow-y: visible
+	.craft__left
+		max-width: none
+	.nav
+		&__li
+			& svg
+				width: 16px
+				height: auto
+			&__dot
+				& svg 
+					width: 6px
+					height: auto
+		&__link
+			font-size: 12px
+	.page__subtitle
+		padding-right: 40px
+@media (max-width: 1786px)
+	.hidden-1200px
+		display: none
+	.visible-1200px
+		display: flex
+		
+	.craft
+		padding: 40px 55px
+@media (max-width: 1605px)
+	.center-content
+		overflow-x: hidden
+	.hidden-1200px
+		display: flex
+	.visible-1200px
+		display: none
+	.right-sidebar-wrapper
+		display: none
+	.craft
+		flex-direction: row
+		padding: 40px 15px
+	.center-content__box-item
+		flex: 0 0 25%
+	.craft__center__right
+		margin-top: 0 
+	.page__subtitle
+		padding-right: 40px
+	.personal-data_mobile
+		display: flex
+		justify-content: space-around
+	.no_authorize_personal-data_mobile
+		margin-bottom: 35px
+		width: 90%
+		padding: 0 35px
+		justify-content: space-between
+@media (max-width: 1440px)
+	.craft
+		flex-direction: column
+	.craft__center__right
+		flex-direction: row
+		align-items: center
+	.craft__center
+		height: 250px
+		margin-bottom: 0px
+	.craft__center__right
+		margin-top: 50px
+	.nav__li
+		& .nav__link
+			margin-left: 0
+		& svg
+			display: none
+	.page__subtitle
+		padding-right: 40px
+@media (max-width: 1370px)
+	.pagination
+		&__page
+			display: none
+			&_active
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				margin-right: 15px
+@media (max-width: 1200px)
+	.hidden-1200px
+		display: none
+	.visible-1200px
+		display: flex
+@media (max-width: 990px)
+	
+	.nav__ul__mobile
+		display: none
+	.left-sidebar-wrapper
+		display: none
+	.craft__center__right
+		flex-direction: row
+	.craft__center
+		margin-bottom: 0
+	.page__subtitle
+		padding-right: 40px
+	.center-content 
+		margin-top: 0
+
+	.top-bar_mobile
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		height: 120px
+		justify-content: center
+	.game-mode
+		margin-bottom: 0
+		margin-left: 20px
+	.right-sidebar__top
+		padding-left: 20px
+		margin-bottom: 0
+		justify-content: flex-end
+		width: 100%
+		& .right-sidebar__noauthorize-text
+			margin-right: 5%
+			font-size: 12px
+	.right-sidebar__pay
+		max-width: 140px
+		width: 100%
+		margin-left: 20px
+		padding-left: 0
+@media (max-width: 768px)
+	.nav__ul__mobile
+		display: flex
+		position: relative
+	body.is-white .win__regime-visible
+		right: 0
+	.win__regime-visible
+		right: 1px
+		top: 49px
+	.center-content
+		margin-bottom: 0
+	.left-sidebar-wrapper
+		display: none
+	.craft__center__right
+		flex-direction: row
+	.craft__center
+		margin-bottom: 0
+	.nav__li
+		margin-left: 0
+		& .nav__link
+			margin-left: 0
+			overflow: hidden
+			white-space: nowrap
+			text-align: center
+			text-overflow: ellipsis
+			flex-direction: column
+			align-items: unset
+			width: 50px
+			justify-content: center
+			height: 100%
+			z-index: 999
+		& svg
+			margin: 0 auto
+			margin-bottom: 5px
+			display: flex
+	.link__text
+		overflow: hidden
+		white-space: nowrap
+		-o-text-overflow: ellipsis
+		text-overflow: ellipsis
+		-webkit-box-orient: vertical
+		-webkit-box-direction: normal
+		width: 50px
+	.nav
+		position: fixed
+		bottom: 0
+		margin-bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 190
+		box-sizing: border-box
+		width: 100%
+	body
+		padding-bottom: 180px
+	.page__subtitle
+		padding-right: 40px
+	.treatment__btn
+		display: none
+	.right-sidebar__noauthorize-text
+		display: none
+	.nav
+        &-desctop
+            display: none
+        &-mobile
+            display: flex
+@media (max-width: 660px)
+	.craft__center__right
+		flex-direction: column
+	.craft__center
+		margin-bottom: 50px
+@media (max-width: 605px)
+	.nav_active:after 
+		height: 25%
+		width: 35%
+		background: #2a8fa5
+		filter: blur(14px)
+	.right-sidebar__noauthorize-text
+		display: none
+
+@media (max-width: 680px)
+	.top-bar_mobile
+		height: 145px
+		flex-direction: row
+		flex-wrap: wrap
+		margin-top: 15px
+	.nav__ul__mobile
+		position: relative
+	.win__regime-visible
+		right: 1px
+		top: 49px
+	.nav__ul
+		justify-content: space-between
+		width: 100%
+	.nav__li:first-child
+		margin-left: 0
+	.nav__ul__mobile
+		margin-left: 10px
+	.no_authorize_mobile
+		padding-left: 0
+		justify-content: center
+		margin-bottom: 4px
+	.authorize_mobile
+		padding-left: 0
+		justify-content: center
+		margin-top: 10px
+	.right-sidebar__pay
+		margin-left: 10px
+	.top-bar_mobile__logo
+		margin-right: 10px
+@media (max-width: 605px)
+	.nav_active:after
+		height: 21px !important
+@media (max-width: 520px)
+	.nav__link
+		font-size: 0
+	.right-sidebar__pay-numb span
+		font-size: 13px
+	.nav:after, .nav:before
+		display: none
+	.accordionItemHeading-box h2
+		font-size: 14px
+	.pagination__page_active
+		margin-right: 15px
+
+@media (max-width: 440px)
+	.game-mode__one, .game-mode__three, .game-mode__two
+		width: 35px
+		height: 35px
+		margin-right: 8px
+	.game-mode__right__content
+		width: 140px
+	.game-mode
+		height: 52px
+@media (max-width: 395px)
+
+	.center-content
+		padding: 0 15px
+
+	.accordionWrapper
+		padding: 0px
+		float: left
+		width: 100%
+		align-items: center
+		display: flex
+		flex-direction: column
+	.accordionItem
+		width: 90%
+
+	body
+		padding-bottom: 90px
+
+@media (max-width: 390px)
+	.top-bar_mobile__logo a img
+		display: none
+	.top-bar_mobile__logo
+		margin-right: 0
+		background-position-x: -16px
+		background-position-y: -11px
+		background-size: 157px
+		width: 100px
+		& a:after
+			display: none
+		& a
+			width: 100px
+
+@media (max-width: 365px)
+	.nav__li
+		width: 35px
+
+@media (max-width: 340px)
+	.top-bar_mobile__logo
+		width: 85px
+		background-position-x: -13px
+		background-position-y: -3px
+		background-size: 133px
+		& a
+			width: 85px
+
+
+
+.nav_active:after
+	height: 85px
+.nav_active:before
+	bottom: -36px

@@ -1,0 +1,212 @@
+@import "_let"
+.craft
+	background: #080828
+.spinner-grow
+	display: inline-block
+	position: absolute
+	width: 2.5rem
+	left: 0
+	height: 2.5rem
+	vertical-align: text-bottom
+	background-color: currentColor
+	border-radius: 50%
+	color: $spinner-grow !important
+	opacity: 0
+	-webkit-animation: spinner-grow 1.5s ease-out infinite
+	animation: spinner-grow 1.5s ease-out infinite
+	right: 0
+	top: 0
+	bottom: 0
+	margin: auto
+
+@-webkit-keyframes spinner-grow
+  0%
+    transform: scale(0)
+
+  50%
+    opacity: 1
+    transform: none
+
+@keyframes spinner-grow
+  0%
+    transform: scale(0)
+
+  50%
+    opacity: 1
+    transform: none
+
+.chance-arrow
+	position: absolute
+	height: 100%
+	width: 100%
+	top: 0
+	& svg
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+
+.parts
+	stroke-width: 4px
+
+.block__arrow
+	position: absolute
+	background: url('../img/svg/block-arrow.svg') no-repeat
+	width: 35px
+	height: 35px
+	top: 0
+	left: 0
+	background-position: -25px
+	background-position-y: -25px
+	overflow: hidden
+	&_rightTop
+		right: 0
+		left: auto
+		transform: rotate(90deg)
+	&_leftBottom
+		bottom: 0
+		top: auto
+		transform: rotate(-90deg)
+	&_rightBottom
+		bottom: 0
+		right: 0
+		left: auto
+		top: auto
+		transform: rotate(180deg)
+
+@media (max-width: 1880px)
+	.craft__right
+		max-width: 220px
+		margin-left: 5px
+	.rangeBox
+		width: 100%
+	.rangeBox .range
+		width: 83%
+	.range-wrap__top
+		width: 83%
+	.craft__form
+		margin-right: 5px
+	.filter .selectric .label
+		font-size: 11px
+
+@media (max-width: 1860px)
+	.craft__center
+		max-width: 240px
+		height: 240px
+		border-width: 19px
+		&__svg
+			width: 250px
+@media (max-width: 1786px)
+	.center-content-top
+		overflow: hidden
+	.right-sidebar-wrapper
+		display: none
+	.craft
+		flex-direction: row
+	.center-content__box-item
+		flex: 0 0 22%
+	.craft__center__right
+		margin-top: 0 
+	.page__subtitle
+		padding-right: 40px
+	.personal-data_mobile
+		display: flex
+		justify-content: space-around
+	.no_authorize_personal-data_mobile
+		margin-bottom: 35px
+		width: 90%
+		padding: 0 35px
+		justify-content: space-between
+	.center-content
+		width: calc(100% - 534px)
+	.craft__right
+		max-width: 270px
+		margin-left: 0px
+	.rangeBox
+		width: 100%
+	.rangeBox .range
+		width: 83%
+	.range-wrap__top
+		width: 83%
+	.craft__form
+		margin-right: 0px
+	.filter .selectric .label
+		font-size: 13px
+@media (max-width: 1440px)
+
+	.game-item__prize
+		display: none
+	.left-sidebar-wrapper, .left-sidebar
+		max-width: 360px
+	.no_authorize_personal-data_mobile
+		padding-right: 0
+	.center-content
+		width: calc(100% - 414px)
+	.craft__form
+		margin-right: 5px
+	.filter .selectric .label
+		font-size: 12px
+@media (max-width: 1315px)
+	.craft__right
+		max-width: 220px
+		margin-left: 5px
+	.rangeBox
+		width: 100%
+	.rangeBox .range
+		width: 83%
+	.range-wrap__top
+		width: 83%
+@media (max-width: 1200px)
+	
+	.craft
+		flex-direction: column
+		&__form
+			margin-right: 0
+			width: 100%
+		&__center
+			margin: 0
+		&__center__right
+			margin-top: 35px
+			justify-content: space-around
+		&__right
+			max-width: 270px
+			margin-left: 0
+		&__left
+			margin-top: 0
+			max-width: 70%
+			margin: 0 auto
+	.filter .selectric .label
+		font-size: 15px
+@media (max-width: 1025px)
+	.craft__right
+		max-width: 250px
+@media (max-width: 990px)
+	.center-content
+		width: calc(100%)
+	.craft__right
+		max-width: 270px
+@media (max-width: 660px)
+	.craft__center
+		margin-bottom: 50px
+	.craft
+		padding-top: 60px !important
+		padding-bottom: 60px !important
+@media (max-width: 580px)
+	.filter .selectric .label
+		font-size: 0.938em
+	.craft__left
+		max-width: 90%
+@media (max-width: 400px)
+	.craft__center
+		height: 230px
+		width: 230px
+		border-width: 18px
+		&__svg
+			width: 240px
+
+@media (max-width: 380px)
+	.craft__left
+		max-width: 100%
+		&__input
+			font-size: 13px
+	.craft
+		padding: 25px 10px

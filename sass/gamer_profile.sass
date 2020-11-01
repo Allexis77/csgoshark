@@ -1,0 +1,314 @@
+@import "_let"
+.gamer
+    &-top
+        display: flex
+        width: 100%
+        justify-content: space-between
+    &-wins
+        &__info
+            font-weight: 600
+            font-size: 12px
+            line-height: 14px
+            color: $gamer-winsInfo
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 540px
+            height: 60px
+            padding: 0 20px
+            background: $gamer-winsInfoBG
+            &-main
+                display: flex
+                justify-content: space-around
+                align-items: center
+                height: 60px
+                width: 400px
+                position: absolute
+                left: 10px
+            &-data
+                position: absolute
+                right: 80px
+        &__box
+            &-item
+                position: relative
+                width: 540px
+                height: 60px
+                margin: 15px 0
+                display: flex
+                justify-content: space-around
+                align-items: center
+                padding: 0 20px
+                background: $dark-BG
+                box-shadow: 0px 15px 45px $dark-BoxShadow
+            &-id
+                color: $text-white
+                font-weight: 600
+                font-size: 12px
+                line-height: 14px
+            &-price
+                font-weight: 600
+                font-size: 12px
+                line-height: 14px
+                color: $primary-blue
+            &-img
+                & img
+                    width: 40px
+            &-jackpot
+                display: flex
+                & div
+                    background: $jackpot-RedGradient
+                    border: 1px solid $jackpot-RedBorder
+                    box-sizing: border-box
+                    border-radius: 100px
+                    font-weight: 600
+                    font-size: 12px
+                    line-height: 14px
+                    color: $jackpot-Red
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                & .gamer-jackpot__money
+                    width: 60px
+                    height: 30px
+                    margin-right: 7px
+                & .gamer-jackpot__koef
+                    width: 50px
+                    height: 30px
+                & .green
+                    background: $jackpot-GreenGradient
+                    border: 1px solid $jackpot-GreenBorder
+                    color: $jackpot-Green
+            &-time
+                & span
+                    font-weight: 600    
+                    font-size: 12px 
+                    line-height: 14px   
+                    color: $text-white  
+    &-dots
+        position: absolute
+        &-first
+            top: 19px
+            left: 22px
+        &-last
+            right: 28px
+            bottom: 27px
+            
+    &-profile
+        width: 100%
+        position: relative
+        display: flex
+        flex-direction: column
+    &__info
+        position: relative
+        width: 280px
+        height: 240px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        background: $dark-BG
+        box-shadow: 0px 15px 45px $selectric
+        &__left
+            & .primary-border
+                width: 106px
+                border: 4px solid $primary-blue
+                height: 106px
+                &__dot
+                    width: 17px
+                    height: 17px
+                    &::before
+                        width: 8px
+                        height: 8px
+                & img
+                    width: 78px
+                    height: 78px
+                & .social img
+                    width: 34px
+                    height: 34px
+                    right: 0
+                    top: 70%
+                    
+        &__name
+            font-weight: bold
+            font-size: 18px
+            line-height: 22px
+            margin-top: 25px
+            color: $text-white
+
+
+@media (max-width: 1880px)
+    .gamer
+        &__info
+            width: 100%
+            padding: 0 30%
+        &-wins
+            margin-left: 10px
+            &__box
+                &-item
+                    width: 100%
+                    padding: 0
+@media (max-width: 1797px)
+    .gamer
+        &-top
+            flex-direction: column
+            &__info
+                display: flex
+                justify-content: center
+                width: 100%
+            &__h
+                margin: 20px 0
+        &__info
+            width: 280px
+            padding: 0
+            margin-bottom: 10px
+        &-wins
+            margin-left: 0
+            &__info
+                width: 100%
+                margin-top: 15px
+                padding: 0
+                &-main
+                    width: 72%
+            &__box
+                &-item
+                    width: 95%
+                    padding: 0 2.4%
+@media (max-width: 1605px)
+    .gamer
+        &-top
+            flex-direction: row
+            &__h
+                margin: 20px 0
+            &__info
+                width: 20%
+        &__info
+            width: 100%
+            padding: 0
+            min-width: 200px
+            margin-bottom: 10px
+        &-wins
+            margin-left: 0
+            width: 77%
+            &__info
+                width: 100%
+                margin-top: 0
+                padding: 0
+                &-main
+                    width: 72%
+            &__box
+                &-item
+                    width: 95%
+                    padding: 0 2.4%
+@media (max-width: 1440px)
+    .gamer
+        &-top
+            flex-direction: column
+            &__info
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+            &__h
+                margin: 20px 0
+        &__info
+            width: 280px
+            padding: 0
+            margin-bottom: 10px
+        &-wins
+            margin-left: 0
+            width: 100%
+            &__info
+                width: 100%
+                margin-top: 15px
+                padding: 0
+                &-main
+                    width: 72%
+            &__box
+                &-item
+                    width: 95%
+                    padding: 0 2.4%
+@media (max-width: 990px)
+    .gamer
+        &-top
+            flex-direction: column
+            &__h
+                margin: 20px 0
+            &__info
+                width: 100%
+        &__info
+            width: 200px
+            padding: 0
+            min-width: 200px
+            margin-bottom: 20px
+        &-wins
+            margin-left: 0
+            width: 100%
+            &__info
+                width: 100%
+                margin-top: 0
+                padding: 0
+                &-main
+                    width: 72%
+            &__box
+                &-item
+                    width: 95%
+                    padding: 0 2.4%
+@media (max-width: 710px)
+    .gamer
+        &-top
+            flex-direction: column
+            &__info
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+            &__h
+                margin: 20px 0
+        &__info
+            width: 280px
+            padding: 0
+            margin-bottom: 10px
+        &-wins
+            margin-left: 0
+            width: 100%
+            &__info
+                width: 100%
+                margin-top: 15px
+                padding: 0
+                &-main
+                    width: 72%
+                .center-content__box-arrow
+                    display: none
+                &-id
+                    overflow: hidden
+                    width: 12px
+                    white-space: nowrap
+                &-data
+                    right: 5%
+            &__box
+                &-item
+                    width: 95%
+                    padding: 0 2.4%
+                    & .gamer-jackpot__koef
+                        display: none
+                &-time
+                    width: 33px
+                    text-align: center
+                &-price
+                    &-span
+                        width: 33px
+                        overflow: hidden
+                        white-space: nowrap
+                    
+@media (max-width: 524px)
+    .gamer
+        &-wins
+            &__info
+                &-data
+                    right: 13%
+            &__box
+                &-item
+                    width: 96%
+                    .center-content__box-arrow
+                        display: none

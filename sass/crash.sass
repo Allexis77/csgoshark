@@ -1,0 +1,737 @@
+@import "_let"
+
+
+
+.right-sidebar__chat-bottom
+	padding-bottom: 10px !important
+	margin-bottom: 5px !important
+.right-sidebar__chat-send textarea
+	margin-bottom: 15px !important
+.right-sidebar__chat-send button
+	top: calc(50% - 3px) !important
+
+
+.center-content__box-arrow-bottom-left, .center-content__box-arrow-bottom-right
+	bottom: -29px
+
+.craft
+	background: $dark-BG
+
+.sale
+	&__dollar
+		margin-left: 3px
+.game-item__prize_done:before
+    background: url('../img/svg/sale_done_bg.svg') no-repeat center / cover !important
+.game-item__prize_done:after
+    background: $green !important
+.crash
+	padding-right: 0
+	position: relative
+	overflow: hidden
+	background: #080828
+	z-index: 1
+	&__action
+		&__top
+			width: 100%
+			height: 65px
+			background: $dark-Menu
+			border: 1.5px solid $box-crash
+			box-sizing: border-box
+			box-shadow: 0px 15px 45px $dark-BoxShadow
+			border-radius: 100px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 0 50px
+			font-size: 24px
+			color: $text-white
+			margin-bottom: 40px
+		&__center
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			margin-bottom: 20px
+	&__actions
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__sale
+		border: 1px solid transparent
+		box-sizing: border-box
+		margin-top: 30px
+		font-family: 'Gilroy'
+		width: 100%
+		overflow-y: hidden
+		overflow-x: auto
+		height: 80px
+		position: relative
+		background: $dark-BG
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		// justify-content: space-around
+		padding: 0 15px
+		font-size: 14px
+		font-weight: bold
+		& .game-item__prize:after
+			opacity: 0.1
+		&_error
+			border: 1px solid $red
+			z-index: 5
+			overflow-y: hidden
+			position: relative
+			&:after
+				position: absolute
+				content: ''
+				width: 100%
+				height: 45px
+				background: url('../img/svg/sale_error_arrows.svg') right no-repeat 
+				right: 1px
+				top: -3px
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 50%
+				background: $red
+				left: 0
+				filter: blur(17px)
+				opacity: .2
+				bottom: -14px
+			& .crash__sale__benefit
+				background: $red
+			& .crash__sale__prize
+				border-color: $red
+		&_done
+			z-index: 5
+			overflow-y: hidden
+			border: 1px solid $green-done
+			position: relative
+			&:after
+				position: absolute
+				content: ''
+				width: 100%
+				height: 45px
+				background: url('../img/svg/sale_done_arrows.svg') right no-repeat 
+				right: 1px
+				bottom: -3px
+			&:before
+				content: ''
+				position: absolute
+				width: 100%
+				height: 50%
+				background: $green-done
+				left: 0
+				filter: blur(17px)
+				opacity: .2
+				bottom: -14px
+		&__prise
+			z-index: 5
+			width: 100px
+			height: 40px
+			flex-shrink: 0
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 1px solid $dark-prise
+			border-radius: 100px
+			color: $primary-blue
+			margin-left: 35px
+			margin-right: 15px
+		&__benefit
+			z-index: 5
+			width: 120px
+			height: 40px
+			background: $green
+			flex-shrink: 0
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 100px
+			color: $text-white
+		&__prize
+			z-index: 5
+			width: 120px
+			flex-shrink: 0
+			height: 40px
+			border: 2px solid $green
+			color: $text-white
+			border-radius: 100px
+			margin-left: 15px
+			margin-right: 25px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			&_done
+				margin-right: 4px
+			
+		& .game-item__prize
+			margin-left: 15px
+
+	&__left
+		width: 40%
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		z-index: 1
+		margin-left: -15px
+		&:before
+			content: ''
+			position: absolute
+			width: 350px
+			background: url(../img/bg/bg-circle.png) center center no-repeat
+			height: 350px
+			left: 15px
+			background-size: cover
+			z-index: -1
+	&__right
+		margin: 0 auto
+	&-info
+		display: flex
+		justify-content: space-between
+		margin-top: 30px
+		&__balance
+			margin-right: 30px
+			& .info__item__value
+				color: $primary-blue
+				position: relative
+				z-index: 1
+				&:after
+					content: ''
+					width: 100%
+					height: 19%
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%)
+					filter: blur(10px)
+					z-index: -1
+					background: $primary-blue
+					opacity: .7
+
+		&__item
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+		&__left, &__right
+			display: flex
+			width: 49%
+			position: relative
+			justify-content: space-between
+			box-sizing: border-box
+			padding: 18px 30px
+			background: $dark-BG
+			align-items: center
+			&__content
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				& .crash-info__item
+					flex-direction: column
+					align-items: flex-start
+.crash__img
+	width: 100px
+	margin-left: 20px
+
+.info
+	&__item
+		&__title
+			color: $text-info
+			font-family: "TT Norms",sans-serif
+			font-weight: 400
+			font-size: 14px
+			text-transform: uppercase
+		&__value
+			font-weight: 700
+			color: $text-white
+			font-size: 14px
+			font-family: 'Gilroy'
+		&__img
+			width: 30px
+			height: 30px
+			margin-right: 10px
+			background: url(../img/roulette_svg/bank.svg) center no-repeat
+			position: relative
+			z-index: 1
+			&:after
+				content: ''
+				width: 70%
+				height: 70%
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				filter: blur(19px)
+				z-index: -1
+				background: $primary-blue
+				opacity: 0.5
+		&__players
+			background: url(../img/roulette_svg/player.svg) no-repeat center
+		&__skins
+			background: url(../img/roulette_svg/skins.svg) no-repeat center
+
+.action
+	&__top
+		&__span
+			display: flex
+			align-items: center
+			height: 100%
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 1px
+				background: $primary-blue
+				bottom: -1px
+		&__arrow
+			width: 45px
+			height: 45px
+			position: relative
+			background: $arrow-action
+			border: 2px solid $arrowRGBA
+			box-sizing: border-box
+			border-radius: 100px
+			z-index: 1
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			&__img
+				width: 100%
+				height: 100%
+				background: url('../img/svg/crash-arrows.svg') no-repeat center top 75%
+			&:after
+				content: ''
+				position: absolute
+				width: 100%
+				height: 100%
+				background: $primary-blue
+				opacity: 0.35
+				z-index: -1
+				filter: blur(23px)
+	&__center
+		&__left
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: relative
+		&__input
+			width: 180px
+			height: 60px
+			padding: 0 25px
+			background: $dark-Menu
+			border: 1.5px solid $box-crash
+			box-sizing: border-box
+			box-shadow: 0px 15px 45px $dark-BoxShadow
+			border-radius: 100px
+			color: $text-white
+			text-align: center
+			margin-right: 10px
+			font-size: 16px
+			font-weight: bold
+			&::placeholder
+				color: $text-white
+				font-size: 16px
+				font-weight: bold
+		&__label
+			text-transform: uppercase
+			font-size: 14px
+			font-weight: bold
+			color: $text-label
+			position: absolute
+			top: -22px
+			margin-right: 10px
+		&__btn
+			width: 180px
+			height: 55px
+			color: $text-white
+			background: $win-RegimeGradient
+			border: 2px solid $primary-blue
+			box-sizing: border-box
+			border-radius: 100px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+		&__span
+			display: block
+			margin-left: 14px
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				height: 100%
+				width: 1px
+				background: $primary-blue
+				left: -7px
+				opacity: 0.15
+			
+
+.roll
+	&-luck
+		&__btn
+			width: 70px
+			height: 35px
+			background: $roll-luckBtn
+			border: 1.3px solid $orange
+			border-radius: 100px
+			cursor: pointer
+			& a
+				font-size: 14px
+				font-weight: 500
+				color: $text-white
+			&:nth-child(2n)
+				background: $purpleGradient
+				border-color: $purple
+			&:nth-child(3n)
+				background: $mauve-blueGradient
+				border-color: $mauve-blue
+			&:nth-child(4n)
+				background: $harlequinGradient
+				border-color: $harlequin
+			&:nth-child(5n)
+				background: $amethystGradient
+				border-color: $amethyst 
+			
+.game-item__btn
+	flex-shrink: 0
+
+.switch
+  position: relative
+  display: block
+  width: 40px
+  height: 20px
+  z-index: 9
+  margin-left: auto
+  margin-bottom: 9px
+
+  input
+    display: none
+
+.checkbox__round
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: $checkbox__round
+  -webkit-transition: .4s
+  transition: .4s
+
+  &:before
+    position: absolute
+    content: ""
+    height: 18px
+    width: 18px
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    background: $active-item
+    -webkit-transition: .4s
+    transition: .4s
+
+input
+  &:checked + .checkbox__round
+    background-color: $checkbox__roundInput
+
+  &:checked + .checkbox__round:before
+    // transform: translate(22px, -50%)
+    transform: translate(22px, -50%)
+
+.checkbox__round.round
+  border-radius: 34px
+
+  &:before
+    border-radius: 50%
+.right-sidebar
+	&__tab
+		& span
+			margin-left: 8px
+			cursor: pointer
+		&_active
+			position: relative
+			& .tab__colorfull
+				fill: url(#paint0_linear)
+			&:after
+				position: absolute
+				content: ''
+				width: 100%
+				height: 2px
+				background: $active-item
+				bottom: -26px
+	&__tabs
+		&-top
+			padding-bottom: 22px
+
+.tab__colorfull
+	fill: $tab__colorfull
+
+.right-sidebar__inventory-bottom
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	height: 180px
+	padding-top: 20px
+
+.tab-wrapper
+	display: none
+	transform: translateX(150%)
+	&_active
+		// width: 95% !important
+		display: block
+		height: 100% !important
+		transform: translateX(0)
+
+.right__inventory__btns
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-around
+	width: 85%
+	padding: 20px 0px
+	&_top
+		width: 100%
+		margin: 0 auto
+		justify-content: center
+	&__input
+		background: url('../img/svg/ic-actions-search.svg') no-repeat center left 18px $dark-inventar
+		box-shadow: 0px 15px 45px $selectric
+		border-radius: 3px
+		border: 0
+		font-family: 'TT Norms'
+		width: 215px
+		height: 50px
+		padding-left: 50px
+		box-sizing: border-box
+		color: $text-white
+		padding-right: 7px
+		margin-right: 20px
+		&::placeholder
+			color: $input-placeholde
+	&__select
+		& .selectric
+			width: 169px
+			height: 50px
+			background: $dark-inventar
+			box-shadow: 0px 15px 45px $selectric
+			border-radius: 3px
+			box-sizing: border-box
+			padding-left: 15px
+			& .label
+				font-family: 'TT Norms'
+				font-style: normal
+				font-weight: 500
+				font-size: 14px
+				color: $input-placeholde
+				text-align: center
+				width: calc(100% - 50px)
+			& .button
+				background: url('../img/svg/ic-actions-down.svg') no-repeat center
+				transform: translateX(-50%)
+				right: -12px
+				top: calc(50% - 17px)
+.inventory__btn
+	cursor: pointer
+	width: 180px
+	height: 55px
+	font-family: Gilroy
+	font-style: normal
+	font-weight: bold
+	font-size: 16px
+	line-height: 12px
+	text-transform: uppercase
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	& img
+		margin-left: 10px
+	&__change
+		border: 2px solid $inventar-change
+		box-sizing: border-box
+		border-radius: 100px
+		background: transparent
+		color: $inventory-btnChange
+	&__get
+		background: $getGradient
+		border: 2px solid $primary-blue
+		box-sizing: border-box
+		border-radius: 100px
+		color: $text-white
+
+.tab__chat__wrapper
+	width: 100%
+	& .right-sidebar__chat-item
+		width: 85%
+		margin: 0 auto
+		margin-top: 20px
+	& .down-chat__text
+		margin-left: 21px
+
+.right-sidebar__chat-bottom
+	height: 480px
+
+@media (max-width: 1786px)
+	.crash__sale
+		justify-content: space-around
+	.right-sidebar-wrapper
+		display: none
+	.craft
+		flex-direction: row
+	.center-content__box-item
+		flex: 0 0 25%
+	.craft__center__right
+		margin-top: 0 
+	.page__subtitle
+		padding-right: 40px
+	.personal-data_mobile
+		display: flex
+		justify-content: space-around
+	.no_authorize_personal-data_mobile
+		margin-bottom: 35px
+		width: 90%
+		padding: 0 35px
+		justify-content: space-between
+	.center-content
+		width: calc(100% - 534px)
+
+@media (max-width: 1440px)
+	.crash__sale
+		justify-content: flex-start
+		overflow-x: auto
+@media (max-width: 1200px)
+	.craft
+		flex-direction: column
+	.crash__left
+		width: 100%
+		height: 300px		
+	.crash-info
+		flex-direction: column
+		&__left
+			margin-bottom: 10px
+	.crash-info__left, .crash-info__right
+		width: 100%
+
+@media (max-width: 990px)
+	.center-content
+		width: calc(100%)
+	.craft
+		flex-direction: row
+	.crash__left
+		width: 40%
+		height: 100%		
+	.crash-info
+		flex-direction: row
+		&__left
+			margin-bottom: 0
+	.crash-info__left, .crash-info__right
+		width: 49%
+
+@media (max-width: 720px)
+	.craft
+		flex-direction: column
+	.crash
+		overflow: hidden
+	.crash__left
+		width: 100%
+		height: 300px		
+	.crash-info
+		flex-direction: column
+		&__left
+			margin-bottom: 10px
+	.crash-info__left, .crash-info__right
+		width: 100%
+		& .center-content__box-arrow
+			display: none
+	.info__item__title
+		font-size: 9px
+	.crash__sale 
+		& .center-content__box-arrow
+			display: none
+	.crash__sale__prize
+		flex-shrink: 0
+	.crash__sale__prise
+		flex-shrink: 0
+	.crash__sale__benefit
+		flex-shrink: 0
+	.game-item__btn
+		flex-shrink: 0
+		margin-right: 15px
+	.action__center__left
+		width: 45%
+	.crash__action__top
+		width: 90%
+		padding: 0 7%
+		font-size: 16px
+	.crash__action__center
+		font-size: 13px
+	.action__center__input
+		width: 65%
+	.action__center__btn
+		width: 45%
+	.crash
+		padding: 0
+	.roll-luck__btn
+		margin: 9px 16px
+	.crash__sale
+		overflow-x: auto
+		overflow-y: hidden
+
+.action__center__label
+	color: #fff
+

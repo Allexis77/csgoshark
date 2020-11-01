@@ -1,0 +1,818 @@
+
+@import "./_let.sass"
+
+
+.primary__btn
+	background: $primary-gradient
+	border: 1px solid $primary-blue
+	margin: 0
+	padding: 0
+	color: $primary-blue
+	padding: 18px 25px
+	border-radius: 100px
+	position: relative
+	padding-left: 55px
+	cursor: pointer
+
+	&__img
+		position: absolute
+		left: 23px
+		transform: translateY(-50%)
+		top: 50%
+*
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+
+li
+    list-style: none
+
+a
+    text-decoration: none
+
+body
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	position: relative
+	background: #131331
+
+.border-line-
+	&left-top
+		position: absolute
+		width: 19.5px
+		height: 20px
+		left: 0
+		top: -1px
+		border-bottom-left-radius: 5.5px
+		-webkit-transform: rotate(-90deg)
+		-ms-transform: rotate(-90deg)
+		transform: rotate(90deg)
+		border-bottom: 1px solid $primary-border
+		border-left: 1px solid $primary-border
+
+	&left-bottom
+		position: absolute
+		width: 19.5px
+		height: 20px
+		left: 0
+		bottom: 0
+		border-bottom-left-radius: 5.5px
+		border-bottom: 1px solid $primary-border
+		border-left: 1px solid $primary-border
+	&right-top
+		position: absolute
+		width: 19.5px
+		height: 20px
+		right: -1px
+		top: 0
+		border-bottom-left-radius: 5.5px
+		-webkit-transform: rotate(180deg)
+		-ms-transform: rotate(180deg)
+		transform: rotate(180deg)
+		border-bottom: 1px solid $primary-border
+		border-left: 1px solid $primary-border
+	&right-bottom
+		position: absolute
+		width: 19.5px
+		height: 20px
+		right: 0
+		bottom: 0
+		-webkit-transform: rotate(-90deg)
+		-ms-transform: rotate(-90deg)
+		transform: rotate(-90deg)
+		border-bottom-left-radius: 5.5px
+		border-bottom: 1px solid $primary-border
+		border-left: 1px solid $primary-border
+
+.border-line-left-top:after
+	content: ''
+	position: absolute
+	width: 100%
+	height: 100%
+	background: $primary-blue
+	z-index: 0
+	opacity: 0.3
+	filter: blur(15px)
+	left: 0
+
+.border-line-right-top:after
+	content: ''
+	position: absolute
+	width: 100%
+	height: 100%
+	background: $primary-blue
+	z-index: 0
+	opacity: 0.3
+	filter: blur(15px)
+	left: 0
+
+.border-line-right-bottom:after
+	content: ''
+	position: absolute
+	width: 100%
+	height: 100%
+	background: $primary-blue
+	z-index: 0
+	opacity: 0.3
+	filter: blur(15px)
+	left: 0
+
+.border-line-left-bottom:after
+	content: ''
+	position: absolute
+	width: 100%
+	height: 100%
+	background: $primary-blue
+	z-index: 0
+	opacity: 0.3
+	filter: blur(15px)
+	left: 0
+
+.primary
+	&-border
+		position: relative
+		border: 1.5px solid $primary-blue
+		border-radius: 50%
+		width: 62.42px
+		height: 62.42px
+		flex-shrink: 0
+		& img
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			border-radius: 50%
+			width: 45px
+			height: 45px
+		&__dot
+			position: absolute
+			background: linear-gradient(180deg, $primary-blue 0%, $blue 100%)
+			width: 9.49px
+			border-radius: 100%
+			height: 9.49px
+			box-shadow: 0px 2px 35px rgba(255, 173, 2, 0.15)
+			&::before
+			   content: ''
+			   width: 4.75px 
+			   height: 4.75px
+			   position: absolute
+			   left: 50%
+			   top: 50%
+			   background: $dark-BG
+			   transform: translate(-50%, -50%)
+			   border-radius: 100% 
+			&-top
+				left: 50%
+				top: 0
+				transform: translate(-50%, -50%)
+			&-right
+				top: 50%
+				right: -1%
+				transform: translate(50%, -50%) rotate(90deg) 
+				
+			&-bottom
+				right: 50%
+				bottom: 0
+				transform: translate(50%, 50%)
+			&-left
+				left: 0
+				top: 50%
+				transform: translate(-50%,-50%) rotate(90deg)
+	&-btn
+		&__pay
+			width: 35px
+			height: 35px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 100%
+			border: 1px solid rgba(0, 211, 255, 0.25)
+			background: linear-gradient(90deg, rgba(0, 211, 255, 0.25) -22.86%, rgba(0, 211, 255, 0) 50.97%, rgba(0, 211, 255, 0.25) 122.86%)
+			& span
+				color: $primary-blue
+				cursor: pointer
+				font-size: 1.5em
+		&__notification
+			& button
+				background: $dark-BG
+				border-radius: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 50px
+				height: 50px
+				border: none
+				outline: none
+		&__exit
+			& button
+				background: $dark-BG
+				border-radius: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 50px
+				height: 50px
+				border: none
+				outline: none
+
+.chat
+	&-online
+		position: relative
+		display: flex
+		justify-content: center
+		width: 20%
+		height: 20px
+		align-items: center
+		border-radius: 100%
+		z-index: 1
+		&::after
+			position: absolute
+			content: ''
+			left: 50%
+			top: 50%
+			z-index: 2
+			border-radius: 100%
+			transform: translate(-50%, -50%)
+			opacity: 0.4
+			height: 20px
+			width: 20px
+			background: $green-gradient
+		& div
+			position: absolute
+			left: 50%
+			top: 50%
+			z-index: 2
+			transform: translate(-50%, -50%)
+			width: 10px
+			opacity: 1
+			height: 10px 
+			background: $green-gradient
+			border-radius: 100%
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			top: 50%
+			z-index: 2
+			transform: translate(-50%, -50%)
+			width: 10px
+			height: 10px 
+			background: $green-gradient
+			border-radius: 100%
+			filter: blur(15px)
+	&-text
+		& p 
+			font-weight: bold
+			color: $text-white
+			font-size: 14px
+			line-height: 17px
+		& span
+			font-weight: 500
+			color: $text-dark
+			font-size: 12px
+			line-height: 14px
+
+
+
+
+
+
+
+.chat-underline
+	width: 480px
+	height: 1px
+	background: $chat-UnderLine
+
+.fontFamilyGilroy
+	font-family: "Gilroy", sans-serif
+.fontFamilyNova
+	font-family: "a_LCDNova", sans-serif
+.fontFamilyTT
+	font-family: "TT Norms", sans-serif
+
+#blue-mask-path
+	stroke-dasharray: 600
+	stroke-dashoffset: 345
+
+#red-mask-path
+	stroke-dasharray: 360
+	stroke-dashoffset: 345
+
+.page
+	&__top__left
+		z-index: 5
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		position: relative
+		&:before
+			z-index: -1
+			content: ''
+			position: absolute
+			width: 63px
+			height: 49px
+			background: url(../img/page/page-title-bg.svg) no-repeat center
+
+	&__title
+		padding-bottom: 7px
+		z-index: 4
+		font-size: 18px
+		font-family: 'Gilroy'
+		font-weight: 900
+		color: $text-white
+		text-transform: uppercase
+
+		&__left > svg
+			width: 50px
+			height: 50px
+
+		&__right
+			padding-top: 10px
+			margin-left: -7px
+
+
+	&__subtitle
+		display: block
+		z-index: 4
+		color: $text-subtitle
+		font-size: 14px
+		font-family: 'Gilroy'
+		font-weight: 500
+
+.social > img
+	width: 25px
+	position: absolute
+	left: unset
+	right: -6px
+	top: 58%
+	-webkit-transform: translate(0)
+	-ms-transform: translate(0)
+	transform: translate(0)
+	height: 25px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.craft__center img
+	animation: levitation 6s ease-in-out infinite
+@keyframes levitation
+  0%,
+  100%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(-15px)
+	
+
+
+
+
+.range
+	-webkit-appearance: none
+	border-radius: 2px
+	height: 5px
+	width: 230px
+	outline: none
+	background: $dark-Range
+	border-radius: 5px
+	&-wrap
+		width: 230px
+		position: relative
+		&__top
+			display: flex
+			bottom: 50%
+			position: absolute
+			width: 230px
+			justify-content: space-between
+			align-items: center
+			& span
+				font-weight: 600
+				font-size: 10px
+				color: $primary-blue
+
+
+
+
+
+.noUi-handle:after, .noUi-handle:before
+	display: none
+.range
+	border: none
+.noUi-target
+	box-shadow: none
+.noUi-horizontal .noUi-handle
+    width: 3px
+    height: 16px
+    right: 0px
+    top: -6px
+
+.noUi-handle
+	border: none
+	background: none
+
+.noUi-touch-area
+	width: 3px
+	height: 16px
+	background: $primary-blue
+	border-radius: 18px
+	cursor: pointer
+	transition: .1s
+.rangeBox
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	height: 60px
+	& .range
+		width: 230px	
+.noUi-tooltip
+	display: block
+	position: absolute
+	border: 0.5px solid $primary-blue
+	border-radius: 2px
+	background: linear-gradient(89.2deg, rgba(0, 211, 255, 0.25) 1.28%, rgba(0, 211, 255, 0) 51.53%, rgba(0, 211, 255, 0.25) 98.73%)
+	color: $primary-blue
+	padding: 5px
+	font-size: 10px
+	text-align: center
+	white-space: nowrap
+	width: 30px
+	&::after
+		top: 100%
+		left: 50%
+		border: solid transparent
+		content: " "
+		height: 0
+		width: 0
+		position: absolute
+		pointer-events: none
+		border-color: rgba(0, 210, 254, 0)
+		background: url(../img/svg/tooltip-arrow.svg) no-repeat bottom center
+		border-width: 6px
+		margin-left: -6px
+.noUi-horizontal .noUi-tooltip
+	bottom: 140%
+.center-content__box-item-active
+	&::before
+		content: '\2714'
+		background: $active-item
+		width: 35px
+		height: 35px
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		position: absolute
+		right: 3%
+		top: 3%
+		color: $text-white
+		z-index: 10
+
+.top-bar_mobile__logo
+	display: flex
+	justify-content: center
+	align-items: center
+	& a
+		height: 80px
+		overflow: hidden
+		& img
+			height: 100px
+
+.hidden-menu
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	flex-direction: column
+	box-shadow: 0px 15px 65px $dark-Menu
+	border-radius: 12px
+	height: auto
+	width: 240px
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(0, 25%)
+	background: $dark-Menu
+	z-index: 30
+	padding: 25px 0
+	& .nav__li
+		&:first-child
+			margin-left: 39px
+		&:nth-child(2)
+			margin: 25px 0 25px 39px
+		&:nth-child(3)
+			margin-bottom: 25px
+	&::before
+		content: ''
+		position: absolute
+		top: -17%
+		left: 5%
+		border: 20px solid transparent
+		border-bottom: 20px solid $dark-Menu
+.visible-main__menu
+	display: none
+	opacity: 1
+.nav
+	&__ul
+		justify-content: space-between
+		&__left
+			display: flex
+			align-items: center
+		&__right
+			height: 100%
+			display: flex
+			align-items: center
+	&__li
+		margin-left: 39px
+		&:first-child
+			margin-left: 19px
+		&__more
+			position: relative
+			margin-left: 0
+			padding-left: 39px
+			&:after
+				position: absolute
+				content: ''
+				height: 50%
+				width: 1px
+				background: $gray-Menu
+				left: 19px
+			& .link__text
+				margin-left: 8px
+		&__dot
+			margin-left: 2px
+			display: flex
+			align-items: center
+			justify-content: center
+			&:first-child
+				margin-left: 0
+			& svg
+				margin: 0 !important
+.win__regime
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 100%
+	min-width: 33%
+	max-width: 33%
+	width: 100%
+	font-family: 'Gilroy'
+	color: $win-Regime
+	&_active
+		background: $win-RegimeGradient
+		border: 1px solid $primary-blue
+		border-radius: 3px
+		color: $primary-blue
+		& path
+			fill: $primary-blue !important
+	& path
+		fill: $win-Regime
+	& svg
+		margin-right: 8px
+	&__wrapper
+		display: flex
+		align-items: flex-end
+		height: 50px
+		width: max-content
+		flex-direction: column
+		border: 1px solid $black-blue
+		border-radius: 3px
+		box-sizing: border-box
+
+
+.win__regime-mobile
+	position: relative
+	width: 130px
+	&:hover
+		& span
+			font-size: 18px
+.win__regime-visible
+	display: none
+	position: absolute
+	right: 31px
+	top: 68px
+	height: 92px
+	width: 130px
+	z-index: 10
+	border: 1px solid $primary-blue
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		background: $black
+		z-index: -1
+		height: 92px
+		width: 130px
+	
+	& .win-regime__mobile
+		border-radius: 0
+		border: none
+		&:hover
+			& span
+				font-size: 18px
+.win__regime-visible_show
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+.win-regime__mobile
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 46px
+	width: 130px
+	font-family: 'Gilroy'
+	background: $win-RegimeGradient
+	border: 1px solid $primary-blue
+	border-radius: 3px
+	color: $primary-blue		
+	& path
+		fill: $primary-blue !important
+	& svg
+		margin-right: 8px
+	& span
+		margin-right: 8px
+.nav__ul__mobile
+	margin-left: 5%
+.nav
+	&-desctop
+		display: flex
+	&-mobile
+		display: none
+	&__ul
+		width: 100%
+.win__regime-visible_show
+	z-index: 100
+.nav__menu
+	position: relative
+.hidden-1200px
+	display: flex
+.visible-1200px
+	display: none
+.win__regime__wrapper-1200px
+	flex-direction: row
+	width: 320px
+.right-sidebar
+	&__tab
+		& span
+			margin-left: 8px
+			cursor: pointer
+		&_active
+			position: relative
+			& .tab__colorfull
+				fill: url(#paint0_linear)
+			&:after
+				position: absolute
+				content: ''
+				width: 100%
+				height: 2px
+				background: $active-item
+				bottom: -26px
+	&__tabs
+		&-top
+			padding-bottom: 22px
+
+.tab__colorfull
+	fill: $tab__colorfull
+
+.right-sidebar__inventory-bottom
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	height: 180px
+	padding-top: 20px
+
+.tab-wrapper
+	display: none
+	transform: translateX(150%)
+	&_active
+		// width: 95% !important
+		display: block
+		height: 100% !important
+		transform: translateX(0)
+
+.right__inventory__btns
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-around
+	width: 85%
+	padding: 20px 0px
+	&_top
+		width: 100%
+		margin: 0 auto
+		justify-content: center
+		padding-bottom: 20px
+	&__input
+		background: url('../img/svg/ic-actions-search.svg') no-repeat center left 18px $dark-inventar
+		box-shadow: 0px 15px 45px $selectric
+		border-radius: 3px
+		border: 0
+		font-family: 'TT Norms'
+		width: 215px
+		height: 50px
+		padding-left: 50px
+		box-sizing: border-box
+		color: $text-white
+		padding-right: 7px
+		margin-right: 20px
+		&::placeholder
+			color: $input-placeholde
+	&__select
+		& .selectric
+			width: 169px
+			height: 50px
+			background: $dark-inventar
+			box-shadow: 0px 15px 45px $selectric
+			border-radius: 3px
+			box-sizing: border-box
+			padding-left: 15px
+			& .label
+				font-family: 'TT Norms'
+				font-style: normal
+				font-weight: 500
+				font-size: 14px
+				color: $input-placeholde
+				text-align: center
+				width: calc(100% - 50px)
+			& .button
+				background: url('../img/svg/ic-actions-down.svg') no-repeat center
+				transform: translateX(-50%)
+				right: -12px
+				top: calc(50% - 17px)
+.inventory__btn
+	cursor: pointer
+	width: 180px
+	height: 55px
+	font-family: Gilroy
+	font-style: normal
+	font-weight: bold
+	font-size: 16px
+	line-height: 12px
+	text-transform: uppercase
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	& img
+		margin-left: 10px
+	&__change
+		border: 2px solid $inventar-change
+		box-sizing: border-box
+		border-radius: 100px
+		background: transparent
+		color: $inventory-btnChange
+	&__get
+		background: $getGradient
+		border: 2px solid $primary-blue
+		box-sizing: border-box
+		border-radius: 100px
+		color: $text-white
+
+.tab__chat__wrapper
+	width: 100%
+	& .right-sidebar__chat-item
+		width: 85%
+		margin: 0 auto
+		margin-top: 20px
+	& .down-chat__text
+		margin-left: 21px

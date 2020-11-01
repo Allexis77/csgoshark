@@ -1,0 +1,561 @@
+@import "_let"
+.user
+	&__title__left_settings
+		padding-top: 10px
+		box-sizing: border-box
+	&__tabs_settings
+		margin-top: 0
+	&__tabs_settings .user__tabs__wrapper_active
+		display: block
+	&__tabs__bottom
+		height: 657px
+		background: $dark-BG
+		padding: 35px 25px
+		box-sizing: border-box
+		overflow-y: auto
+.tabs__settings__vk
+	display: flex
+	justify-content: flex-start
+	box-sizing: border-box
+	align-items: center
+	background: #121327
+	box-shadow: 0px 15px 45px rgba(17, 18, 36, 0.45)
+	border-radius: 6px
+	width: 80%
+	height: 50px
+	padding-right: 16px
+	&-span
+		font-family: Gilroy
+		color: #fff
+		font-weight: bold
+		font-size: 12px
+		line-height: 15px
+		margin-right: 11px
+	&-plus
+		background: #1B1C34
+		border-radius: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 20px
+		height: 20px
+		flex-shrink: 0
+		& a
+			text-decoration: none
+			color: #fff
+			font-size: 16px
+.tabs__settings__accounts
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	flex-wrap: nowrap
+	width: 100%
+	height: 135px
+.user__tabs__bottom::-webkit-scrollbar
+  width: 7px
+  height: 7px
+  background-color: $chat-UnderLine
+  border-radius: 100px
+
+.user__tabs__bottom::-webkit-scrollbar-thumb
+  background-color: $scrollbar-thumb
+  border-radius: 100px
+
+.user__tabs__bottom::-webkit-scrollbar-corner
+	background-color: transparent
+
+.tabs__settings
+	&__status
+		background: $user-profileBG
+		box-shadow: 0px 15px 45px $dark-BoxShadow
+		border-radius: 6px
+		padding: 20px
+		box-sizing: border-box
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		margin-bottom: 19px
+		&_left
+			flex: 0 0 49%
+			flex-shrink: 0
+			&__title
+				font-family: Gilroy
+				font-style: normal
+				font-weight: bold
+				font-size: 15px
+				color: $text-white
+				margin-bottom: 16px
+			&-content
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+			&__level
+				flex-shrink: 0
+				width: 69px
+				height: 59px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				background: url('../img/svg/chaplet.png') no-repeat left
+				& span
+					color: $user-profileGreenRGBA
+					font-family: Gilroy
+					font-size: 18px
+					font-weight: 900
+					margin-top: -5px
+					display: block
+					margin-right: 1px
+				&__info
+					font-family: Gilroy
+					font-style: normal
+					font-weight: 500
+					font-size: 12px
+					line-height: 13px
+					color: $user-settingsInfo
+					margin-left: 10px
+		&_right
+			flex: 0 0 48%
+			&__title
+				color: $user-settingsInfo
+				font-family: Gilroy
+				font-style: normal
+				font-weight: 500
+				font-size: 14px
+				margin-bottom: 16px
+			&__li
+				font-size: 12px
+				color: $text-white
+				font-weight: 600
+				margin-top: 10px
+				padding-left: 20px
+				position: relative
+				font-family: Gilroy
+				&:after
+					content: ''
+					position: absolute
+					left: 0
+					top: -2px
+					background: url('../img/svg/settings-li-after.svg') no-repeat left
+					background-size: 16px
+					width: 16px
+					height: 16px
+	&__input-wrap
+		position: relative
+		width: 49%
+	&__inputs
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 25px
+		& input
+			width: 100%
+			height: 50px
+			background: $user-profileBG
+			border: 1px solid $user-settings
+			box-sizing: border-box
+			box-shadow: 0px 15px 45px $dark-BoxShadow
+			border-radius: 6px
+			font-size: 12px
+			color: $user-settingsItem
+			font-weight: 600
+			padding-left: 15px
+			&::placeholder
+				font-size: 12px
+				color: $user-settingsItem
+				font-weight: 600
+		& button
+			height: 93%
+			width: 45px
+			background: $user-profileBG
+			border: 0
+			position: absolute
+			right: 1px
+			top: 50%
+			transform: translateY(-50%)
+			line-height: 50px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+	&__input_email
+		padding-left: 45px !important
+		background: url('../img/svg/ic-contact-mail.svg') no-repeat left 1px top 7.2px $user-profileBG!important
+	&__accounts, .tabs__account__bottom__block-wrapper
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		margin-top: 33px
+		justify-items: center
+		grid-gap: 15px
+		&__title
+			font-family: Gilroy
+			font-style: normal
+			font-weight: bold
+			font-size: 15px
+			color: $text-white
+			margin-bottom: 8px
+			padding-left: 25px
+			padding-top: 5px
+			background: url('../img/svg/paper_clip.svg') no-repeat left -12px top -8px
+		&__subtitle
+			font-family: Gilroy
+			font-style: normal
+			font-weight: 600
+			font-size: 12px
+			line-height: 14px
+			color: $user-settingsSubtitle
+			margin-left: 25px
+			display: block
+.tabs__account__bottom__block
+	width: 100%
+	height: 50px
+	background: $user-profileBG
+	box-shadow: 0px 15px 45px $dark-BoxShadow
+	border-radius: 6px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	color: $text-white
+	font-size: 12px
+	padding-right: 7px
+	&__img
+		display: flex
+		width: 53px
+		height: 49px
+		align-items: center
+		justify-content: center
+	&__action
+		width: 20px
+		height: 20px
+		background: $gamer-winsInfoBG
+		margin-left: auto
+		margin-right: 15px
+		border-radius: 100px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+	&_connect .tabs__account__bottom__block__action
+		background: $user-settingsGreenBG
+		cursor: default
+.tabs__bonuses
+	&__accounts
+		&__title
+			background: url('../img/svg/ic-layout-picture-right.svg') no-repeat left -12px top -8px
+			margin-bottom: 30px
+
+.tabs__settings__theme__title
+	background: url('../img/svg/ic-editor-color.svg') no-repeat left -15px top -8px
+
+.tabs__settings__theme__subtitle
+	max-width: 240px
+
+.settings__theme__switch
+	padding-left: 25px
+	display: flex
+	align-items: center
+	padding-top: 14px
+	margin-bottom: 34px
+	& .info__item__title
+		color: #2C2E4A
+		margin-left: 7px
+		font-size: 13px
+.switch
+  position: relative
+  display: block
+  width: 40px
+  height: 20px
+  z-index: 9
+  margin-left: 0px
+
+  input
+    display: none
+.tabs__settings__coin
+	display: flex
+	justify-content: space-around
+	width: 100%
+	align-items: center
+	padding: 0 15px
+	height: 50px
+	box-sizing: border-box
+	&-span
+		margin-right: 0
+.checkbox__round
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: $checkbox__round
+  -webkit-transition: .4s
+  transition: .4s
+
+  &:before
+    position: absolute
+    content: ""
+    height: 18px
+    width: 18px
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    background: $active-item
+    -webkit-transition: .4s
+    transition: .4s
+
+input
+  &:checked + .checkbox__round
+    background-color: $checkbox__roundInput
+
+  &:checked + .checkbox__round:before
+    // transform: translate(22px, -50%)
+    transform: translate(22px, -50%)
+
+.checkbox__round.round
+  border-radius: 34px
+
+  &:before
+    border-radius: 50%
+.tabs__settings__vk-wrapper, .tabs__settings__coin-wrapper
+	grid-template-columns: 90%
+.tabs__settings-box
+	display: flex
+	& .tabs__settings__accounts
+		margin-top: 0
+@media (max-width: 1836px)
+	.tabs__settings__status_right__li
+		font-size: 10px
+	.tabs__account__bottom__block-wrapper
+		grid-template-columns: repeat(1, 1fr)
+		height: 100%
+	.tabs__settings__vk
+		justify-content: space-between
+	.tabs__settings__coin
+		justify-content: space-around
+		margin-left: 0
+@media (max-width: 1760px)
+	.tabs__settings__status_left__title, .tabs__settings__status_right__title
+		font-size: 13px
+	.tabs__settings__status_left-content
+		flex-direction: column
+	.tabs__settings__status_left__level__info
+		margin-left: 0
+		margin-top: 5px
+		max-width: 80%
+		text-align: center
+		font-size: 11px
+	.tabs__settings__status_right
+		flex: 0 0 51%
+	.tabs__settings__status_left
+		flex: 0 0 46%
+
+@media (max-width: 1715px)
+	.tabs__settings__status_left-content
+		flex-direction: row
+	.tabs__account__bottom__block-wrapper
+		grid-template-columns: repeat(1,1fr)
+		height: max-content
+	.tabs__settings__status_right
+		flex: 0 0 35%
+	.tabs__settings__status
+		justify-content: space-around
+	.tabs__settings__status_left__level__info
+		margin-left: 5px
+		margin-top: 0
+	.tabs__settings__vk
+	.tabs__settings__coin
+		margin-left: 15px
+	.tabs__settings-box
+		flex-direction: row
+
+
+@media (max-width: 1470px)
+	.tabs__settings__status_right
+		flex: 0 0 40%
+	.tabs__settings__vk
+		width: 100%
+	.tabs__settings__status
+		justify-content: center
+	.tabs__settings__status_left
+		margin-right: 20px
+	.tabs__account__bottom__block-wrapper
+		grid-template-columns: repeat(2, 1fr)
+		height: max-content
+	.tabs__settings-box
+		flex-direction: column
+		height: 520px
+	.tabs__settings__vk
+		justify-content: space-between
+	.tabs__settings__coin
+		justify-content: space-around
+		margin-left: 0
+@media (max-width: 1390px)
+	.tabs__settings__status_left-content
+		flex-direction: column
+	.tabs__settings__status_left__level__info
+		margin-left: 0
+		margin-top: 5px
+		max-width: 80%
+		text-align: center
+		font-size: 11px
+	.tabs__settings__status_left
+		flex: 0 0 40%
+		flex-basis: calc(46% - 20px)
+		margin-right: 0
+	.tabs__settings__inputs
+		flex-direction: column
+	.tabs__settings__input-wrap:first-child
+		margin-bottom: 15px
+	.tabs__settings__coin
+		&-span
+			width: 40%
+
+	.tabs__settings__input-wrap
+		width: 100%
+	.tabs__settings__status
+		justify-content: space-around
+	.tabs__settings__status_right
+		flex: 0 0 50%
+@media (max-width: 1319px)
+	.tabs__settings__status_left__level__info
+		max-width: 90%
+
+@media (max-width: 1300px)
+	.tabs__settings__status
+		flex-direction: column
+	.tabs__settings__status_left, .tabs__settings__status_right
+		flex-basis: 100%
+		width: 100%
+	.tabs__settings__status_left__level__info 
+		max-width: 50%
+	.tabs__settings__status_right
+		margin-top: 30px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+	.tabs__settings__status_right__title
+		margin-bottom: 5px
+
+
+@media (max-width: 1215px)
+	.tabs__settings__status_left-content
+		flex-direction: column
+	.tabs__settings__status_left__level__info
+		margin-left: 0
+		margin-top: 5px
+		max-width: 140px
+	.tabs__settings__status_left
+		flex: 0 0 40%
+		flex-basis: calc(46% - 20px)
+		margin-right: 0
+	.tabs__settings__inputs
+		flex-direction: column
+	.tabs__settings__input-wrap:first-child
+		margin-bottom: 15px
+	.tabs__settings__input-wrap
+		width: 100%
+	.tabs__settings__status
+		justify-content: space-around
+	.tabs__settings__status_right
+		flex: 0 0 50%
+	.tabs__settings__status
+		flex-direction: row
+	.tabs__settings__status_right
+		margin-top: 0
+	.tabs__settings__inputs
+		flex-direction: row
+	.tabs__settings__input-wrap
+		width: 49%
+	.tabs__settings__input-wrap:first-child
+		margin-bottom: 0px
+	.tabs__settings__accounts__subtitle
+		max-width: 60%
+	.tabs__settings__status_right
+		margin-top: 30px
+	
+@media (max-width: 1110px)
+	.tabs__settings__inputs
+		flex-direction: column
+	.tabs__settings__input-wrap:first-child
+		margin-bottom: 15px
+	.tabs__settings__input-wrap
+		width: 100%
+	.tabs__settings__status
+		flex-direction: column
+
+@media (max-width: 990px)
+	.tabs__settings__status
+		flex-direction: row
+	.tabs__settings__status_right
+		margin-top: 0
+	.tabs__settings__status_left
+		margin-right: 10px
+		flex-basis: 46%
+	.tabs__settings__status_right
+		flex-basis: 53%
+
+@media (max-width: 600px)
+	.tabs__settings__status
+		flex-direction: column
+	.tabs__settings__status_right
+		margin-top: 30px
+	.tabs__settings__status_left
+		margin-right: 0
+	.tabs__settings__status_left, .tabs__settings__status_right
+		width: 100%
+		flex-basis: 100%
+
+@media (max-width: 550px)
+	.tabs__account__bottom__block-wrapper
+		grid-template-columns: repeat(1, 1fr)
+	.user__tabs__top__item:first-child
+		margin-left: -10px
+		margin-right: -4px
+	.user__tabs__top__item 
+		font-size: 13px
+	.tabs__settings__accounts__subtitle
+		max-width: 80%
+
+@media (max-width: 460px)
+	.user__tabs__top__item
+		font-size: 12px
+
+@media (max-width: 400px)
+	.user__tabs__top__item:first-child
+		margin-right: 5px
+	.user__tabs__top__item
+		font-size: 0
+	.user__tabs__top__item_active:after
+		width: 50%
+		left: 50%
+	.user__tabs__bottom
+		padding: 35px 10px

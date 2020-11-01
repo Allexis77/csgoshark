@@ -1,0 +1,216 @@
+.modal
+	background: #17182E
+	color: #fff
+	font-family: 'Gilroy'
+	max-width: 560px
+	text-align: left
+	&__title
+		padding-top: 25px
+		padding-bottom: 25px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		position: relative
+		margin-bottom: 20px
+		&:after
+			content: ''
+			position: absolute
+			width: 57px
+			height: 57px
+			background: url(../img/svg/modal-dots.svg) no-repeat center
+			top: 50%
+			transform: translateY(-50%)
+		&__h3
+			padding-left: 10px
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				width: 25px
+				height: 3px
+				background: #00D3FF
+				bottom: -10px
+				left: 10px
+
+	&__inputs
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 50px
+		& img
+			margin-top: 20px
+
+	&__input
+		border: 0
+		font-size: 24px
+		text-align: center
+		color: #fff
+		width: 200px
+		height: 65px
+		background: #111225
+		box-shadow: 0px 15px 45px rgba(14, 12, 23, 0.25)
+		border-radius: 9.416px
+		&::placeholder
+			color: #fff
+
+		&__wrapper
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			align-items: center
+		&__label
+			color: #404161
+			margin-bottom: 8px
+			font-weight: 600
+
+	&__close
+		cursor: pointer
+
+	&__types__pay
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 50px
+
+	&__type__pay
+		height: 200px
+		display: flex
+		padding-left: 23px
+		justify-content: center
+		flex-direction: column
+		border-radius: 12px
+		flex: 0 0 43%
+		color: #fff
+		font-size: 18px
+		&__money
+			background: linear-gradient(180deg, rgba(23, 20, 36, 0) 0%, rgba(140, 198, 83, 0.45) 100%), #1E1F3A
+		&__skins
+			background: linear-gradient(180deg, rgba(23, 20, 36, 0) 0%, rgba(0, 211, 255, 0.45) 100%), #1E1F3A
+		&__title
+			padding-left: 20px
+		&__img
+			width: 50%
+			height: 76.36px
+	&__promocode
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&__input
+			flex: 0 0 65%
+			height: 50px
+			color: #fff
+			text-align: center
+
+			background: #111225
+			border: 1.5px solid rgba(0, 211, 255, 0.15)
+			box-sizing: border-box
+
+			box-shadow: 0px 15px 45px rgba(17, 18, 36, 0.45)
+			border-radius: 100px
+			&::placeholder
+				color: #fff
+				font-size: 14px
+				font-weight: 500
+
+		&__btn
+			flex: 0 0 30%
+			padding: 0
+			height: 50px
+			font-weight: 700
+	&__bonus
+
+		&__wrapper
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-top: 25px
+			margin-bottom: 25px
+		&__total
+			text-align: center
+			&__title
+				color: #7577A5
+				font-size: 14px
+				margin-top: 7px
+			&__number
+				font-size: 24px
+		&__ul
+			line-height: 25px
+		&__list
+			color: #7577A5
+			position: relative
+			padding-left: 12px
+			&:after
+				position: absolute
+				left: 0
+				content: '-'
+	&__alert
+		border-radius: 6px
+		background: #111225
+		padding: 15px 0px
+		text-align: center
+		font-size: 16px
+		&__text__span
+			color: #00D3FF
+			font-weight: 600
+
+@media (max-width: 660px)
+	.modal
+		max-width: 96%
+		& .accordionItemHeading-leftTop__arrow, & .accordionItemHeading-rightTop__arrow, & .accordionItemHeading-leftBottom__arrow, & .accordionItemHeading-rightBottom__arrow
+			display: none
+	.modal__types__pay
+		flex-direction: column
+	.modal__type__pay
+		flex: unset
+		width: 70%
+		margin-bottom: 20px
+		&:nth-child(2)
+			margin-bottom: 0
+	.modal__inputs
+		flex-direction: column
+		height: 270px
+		& img
+			margin-top: 0
+
+	.modal__promocode
+		flex-direction: column
+		&__input, &__btn
+			flex: unset
+			width: 100%
+		&__btn
+			margin-top: 15px
+
+	.modal__bonus__wrapper
+		flex-direction: column
+	.modal__bonus__ul
+		text-align: center
+		margin-bottom: 15px
+	.modal__bonus__list
+		&:after
+			display: none
+
+@media (max-width: 475px)
+	.modal__type__pay
+		width: 90%

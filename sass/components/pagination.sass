@@ -1,0 +1,48 @@
+.pagination-wrapper
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 100%
+	z-index: 9
+
+.pagination
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	&__page
+		color: #fff
+		font-family: Gilroy
+		font-size: 16px
+		font-weight: bold
+		margin-left: 15px
+		&:last-child
+			margin-right: 15px
+		&_active
+			cursor: default !important
+			background: #00D3FF !important
+			margin-right: 0 !important
+
+.prev-arrow, .next-arrow, .pagination__page
+	width: 50px
+	height: 50px
+	background: linear-gradient(90deg, rgba(0, 211, 255, 0.25) 0%, rgba(0, 211, 255, 0) 50.33%, rgba(0, 211, 255, 0.25) 98.61%)
+	border: 1px solid #00D3FF
+	border-radius: 100px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+
+.next-arrow
+	transform: rotate(180deg)

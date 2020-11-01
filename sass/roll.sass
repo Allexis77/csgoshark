@@ -1,0 +1,454 @@
+@import "_let"
+.center-content
+    width: calc(100% - 1014px)
+input
+	&::placeholder
+		color: $text-white
+.roulette__number__game__wrapper
+	position: absolute
+	top: -17.5px
+	left: 50%
+	transform: translateX(-50%)
+	width: 140px
+	height: 45px
+	background: $gamer-winsInfoBG
+	box-shadow: 0px 15px 45px $dark-BoxShadow
+	border-radius: 100px
+	z-index: 11
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 14px
+	color: $roulette-text
+	line-height: 12px
+	font-weight: 600
+
+
+.roll
+	&-luck
+		background: $dark-BG
+		box-shadow: 0px 15px 45px $roll-Shadow
+		padding: 15px 20px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&__btn
+			width: 60px
+			height: 30px
+			background: $roll-luckBtn
+			border: 1.3px solid $orange
+			color: $text-white
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 12px
+			font-weight: 500
+			cursor: pointer
+			&:nth-child(2n)
+				background: $purpleGradient
+				border-color: $purple
+			&:nth-child(3n)
+				background: $mauve-blueGradient
+				border-color: $mauve-blue
+			&:nth-child(4n)
+				background: $harlequinGradient
+				border-color: $harlequin
+	&-start
+		cursor: pointer
+		width: 160px
+		height: 45px
+		color: $primary-blue
+		background: $roll-startGradient
+		border: 1.5px solid $primary-blue
+		box-sizing: border-box
+		border-radius: 100px
+		position: relative
+		padding-left: 29px
+		text-align: left
+		&__img
+			position: absolute
+			top: calc(50% + 4px)
+			transform: translateY(-50%)
+			right: 14px
+	&-bet
+		padding: 25px
+		background: $dark-BG
+		margin-top: 20px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&__center
+			& h3
+				text-align: center
+				margin-top: 15px
+				color: #fff
+				font-weight: 400
+				& span 
+					color: $primary-blue
+					font-weight: 700
+		&__left, &__right
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: space-between
+	&-info
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 15px 40px
+		padding-left: 22px
+		max-width: 584px
+		width: 100%
+		margin: 0 auto
+		background: $dark-BG
+		margin-top: 20px
+		&__item
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			&:nth-child(4) > .info__item__image__wrapper
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: center
+				align-items: center
+				background: url('../img/roulette_svg/bank.svg') no-repeat center
+				position: relative
+				z-index: 2
+				&:after
+					content: ''
+					width: 35%
+					height: 42%
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					filter: blur(19px)
+					z-index: -1
+					background: $primary-blue
+			&:nth-child(5) > .info__item__image__wrapper
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				background: url('../img/roulette_svg/player.svg') no-repeat center
+				position: relative
+				z-index: 2
+				&:after
+					content: ''
+					width: 35%
+					height: 47%
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					filter: blur(25px)
+					z-index: -1
+					background: $primary-blue
+
+	&-winner
+		margin-top: 20px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		background: $dark-BG
+		padding: 10px 20px
+		justify-content: space-between
+		&__left, &__right
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+
+.winner
+	&__info__text
+		width: 97px
+		height: 40px
+		background: $winner-BG
+		border-radius: 100px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-left: 15px
+		font-weight: 600
+		font-size: 14px
+		line-height: 17px
+		text-transform: uppercase
+		color: $winner-text
+	&__info__img
+		width: 16px
+		height: 24px
+		background: url('../img/roulette_svg/bank-mini.svg') no-repeat center top -7px
+		margin-right: 8px
+	&__btn
+		margin-right: 0
+		margin-left: 15px
+	&__price
+		color: $text-white
+
+
+.info
+	&__item
+		&__name
+			color: $text-info
+			font-family: "TT Norms", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+		&__value
+			font-weight: bold
+			color: $text-white
+			font-size: 14px
+		&__image__wrapper
+			width: 55px
+			height: 45px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			background: url('../img/roulette_svg/statistics.svg') no-repeat center top
+	
+.roulette__winsItem
+	border: 1px solid $primary-blue
+.bet
+	&__title
+		font-size: 14px
+		line-height: 17px
+		color: $bet-title
+		margin-bottom: 10px
+	&__left, &__right
+		margin-right: 15px
+	&__btn
+		width: 50px
+		height: 30px
+		background: $bet-btnBG
+		border-radius: 100px
+		color: $bet-btn
+		font-size: 14px
+		cursor: pointer
+		border: 0
+	&__input
+		width: 140px
+		height: 50px
+		background: $bet-btnBG
+		border: 1px solid $box-crash
+		box-sizing: border-box
+		box-shadow: 0px 15px 45px $dark-BoxShadow
+		border-radius: 100px
+		color: $text-white
+		padding: 0px 20px
+		font-size: 18px
+		text-align: center
+		&__wrapper
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				width: 40px
+				height: 1px
+				bottom: 0
+				left: 50%
+				transform: translateX(-50%)
+				background: $primary-blue
+				box-shadow: 0px 4px 15px $arrowRGBA
+
+.roll-info__item:nth-child(4)>.info__item__image__wrapper
+	background: url('../img/roulette_svg/bank.svg') center no-repeat
+
+@media screen and ( max-width: 1900px )
+	
+	.roll-luck__btn
+		width: 45px
+		height: 23px
+		font-size: 10px
+	.roll-luck
+		padding: 15px 10px
+	.roll-start
+		margin: 25px 0px
+	.bet__left, .bet__right
+		margin-left: 5px
+	.roll-bet
+		flex-direction: column
+
+@media screen and ( max-width: 1710px )
+	.roll-info
+		max-width: 484px
+
+@media screen and ( max-width: 1670px )
+	.bet__left, .bet__right
+		margin-left: 5px
+
+@media screen and ( max-width: 1605px )	
+	.right-sidebar-wrapper
+		display: none
+	.roll-bet
+		flex-direction: row
+	.roll-start
+		margin: 0px 10px
+	.roll-info
+		max-width: 584px
+	.center-content
+		width: calc(100% - 534px)
+
+@media screen and ( max-width: 1405px )	
+	.roll-bet
+		flex-direction: column
+		position: relative
+		align-items: flex-start
+	.roll-bet__right
+		margin-top: 10px
+	.roll-bet__center
+		position: absolute
+		right: 10%
+		top: 50%
+		transform: translateY(-50%)
+	.roll-info
+		max-width: 80%
+
+@media screen and ( max-width: 1178px )
+	.container
+		width: 100%
+	.roll-luck
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-row-gap: 16px
+		justify-items: center
+	.roll-luck__btn
+		width: 60px
+		height: 30px
+		font-size: 12px
+	.roll-bet__center
+		position: unset
+		right: unset
+		top: unset
+		transform: translateY(0%)
+		margin-top: 20px
+		margin-bottom: 10px
+	.roll-bet
+		align-items: center
+	.info__item__value
+		font-size: 12px
+
+@media screen and ( max-width: 990px )
+	.center-content
+		width: 100%
+		box-sizing: border-box
+	.preview__container
+		margin-top: 15px
+	.roll-bet
+		flex-direction: row
+		&__right
+			margin-top: 0
+	.info__item__value
+		font-size: 16px
+	.roll-luck
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+
+@media screen and ( max-width: 930px )
+	.roll-bet
+		flex-direction: column
+		position: relative
+		align-items: flex-start
+		&__right
+			margin-top: 10px
+	.info__item__value
+		font-size: 16px
+	.roll-bet__center
+		position: absolute
+		right: 10%
+		top: 50%
+		transform: translateY(-50%)
+		margin: 0
+
+@media screen and ( max-width: 830px )
+	.roll-luck
+		display: grid
+	.roll-bet__center
+		right: 30px
+
+@media screen and ( max-width: 640px )
+	.roll-info
+		flex-direction: column
+	.roll-bet__center
+		position: unset
+		right: unset
+		top: unset
+		transform: translateY(0%)
+		margin-top: 20px
+		margin-bottom: 10px
+	.roll-bet
+		align-items: center
+
+@media screen and ( max-width: 425px )
+	.roll-luck__btn
+		width: 55px
+		height: 28px
+		font-size: 10px
+	.bet__btns
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		& > .bet__btn:not(:last-child)
+			margin-bottom: 10px
+	.roll-bet__left, .roll-bet__right
+		width: 100%
+	.bet__left, .bet__right
+	    width: 30%
+	    text-align: center
+
+@media screen and ( max-width: 405px )
+	.winner__info__img
+		display: none
+	.winner__info__text
+		width: 57px
+		height: 30px
+	.roulette-wrapper > .center-content__box-arrow
+		display: none
+	.roll-info
+		overflow: hidden
+	body
+		padding-bottom: 120px
+
+@media screen and ( max-width: 340px )
+	.winner__info__text
+		margin-left: 8px
+		margin-right: 8px
+	.roll-winner__img > .primary-border img
+		width: 38px
+	.roll-winner__img > .primary-border
+	    width: 42.6px !important
+	    height: 42.6px !important

@@ -1,0 +1,200 @@
+@import "_let"
+.support
+    &-top
+        margin: 31px 0 20px 0
+        & h3 
+            color: $text-white
+    &-message
+        & .support-bottom__img
+            position: relative
+            & img
+                width: 16px
+            &::before
+                content: ''
+                background: $active-item
+                position: absolute
+                left: 50%
+                width: 38px
+                height: 38px
+                border-radius: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+    &-bottom
+        overflow: hidden
+        height: 789px
+        width: 95%
+        background: $gamer-winsInfoBG
+        padding: 46px 26px
+        position: relative
+        padding-bottom: 22px
+        &__wrapper
+            height: 600px
+            overflow-y: scroll 
+            background: $gamer-winsInfoBG
+            padding: 46px 26px
+        &__h
+            & h3 
+                color: $text-white
+                font-weight: 700
+                font-size: 18px
+        &__message
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            margin: 10px 30px
+            position: relative
+            & p 
+                color: $massage
+                font-size: 16px
+                font-weight: 500        
+                background: $massage-BG
+                padding: 18px 23px
+                width: 100%
+                border-radius: 6px
+            &::before
+                content: ''
+                position: absolute
+                border: 10px solid transparent 
+                border-left: 15px solid $massage-BG
+                top: 15px
+                left: -24px
+                transform: scaleX(-1)
+        &__info
+            margin-top: 16px
+            & span
+                font-size: 14px
+                font-weight: 600
+                color: $support-info
+        &__img
+            margin-top: 10px
+        &__chat
+            &-item
+                display: flex
+                flex-direction: row-reverse
+                justify-content: flex-end
+                align-items: flex-start
+            &-send
+                width: 90%
+                margin: 0 auto
+                height: 80px
+                border-radius: 100px
+                background: $dark-BG
+                display: flex
+                justify-content: space-around
+                align-items: center
+                padding: 0 16px
+                & textarea
+                    padding-left: 20px
+                    width: 70%
+                    color: $text-white
+                    word-wrap: break-word
+                    background: none
+                    border: none
+                    font-weight: 700
+                    resize: none
+                    height: 40px
+                    font-size: 16px
+                    &::placeholder
+                        color: $text-info
+                & button
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    height: 50px
+                    width: 150px
+                    padding: 0
+                    font-size: 14px
+                    font-weight: 700
+                    color: $text-white
+                    & span
+                        margin: 20px 0 18px 7px
+            & .your-message
+                & .support-bottom__message
+                    transform: scaleX(-1)
+                    align-items: flex-end
+                    &::before
+                        display: none
+                    &::after
+                        content: ''
+                        position: absolute
+                        border: 10px solid transparent 
+                        border-left: 15px solid $massage-BG
+                        top: 15px
+                        right: -24px
+.support-bottom__wrapper::-webkit-scrollbar
+    width: 7px
+    height: 7px
+    background-color: $chat-UnderLine
+    border-radius: 100px
+.support-bottom__wrapper::-webkit-scrollbar-thumb
+    background-color: $scrollbar-thumb
+    border-radius: 100px
+.support-bottom__wrapper::-webkit-scrollbar-corner
+    background-color: transparent
+#input-send::-webkit-scrollbar
+    width: 7px
+    height: 7px
+    background-color: $chat-UnderLine
+    border-radius: 100px
+#input-send::-webkit-scrollbar-thumb
+    background-color: $scrollbar-thumb
+    border-radius: 100px
+#input-send::-webkit-scrollbar-corner
+    background-color: transparent
+
+@media (max-width: 1870px)
+    .support
+        &-top
+            width: 100%
+        &-bottom
+            width: 100%
+            height: 845px
+            box-sizing: border-box
+            &__h
+                width: 100%
+                padding-bottom: 20px
+            &__wrapper
+                width: 100%
+                box-sizing: border-box
+                height: 650px
+            &__chat
+                width: 100%
+                &-form
+                    padding-top: 10px
+
+@media (max-width: 768px)
+    body
+        padding-bottom: 140px 
+@media (max-width: 540px)
+    .support-bottom__chat-send textarea::placeholder
+        font-size: 13px
+@media (max-width: 510px)
+    .support-bottom__chat-send button
+        font-size: 0
+        width: 50px
+        & span
+            margin: 0
+
+@media (max-width: 460px)
+    .support-bottom__chat .your-message .support-bottom__message::after, .support-bottom__message::before
+        display: none
+
+    .support-bottom__chat-item
+        width: 100%
+    .support-bottom__message
+        margin-left: 5px
+    .support-bottom__message p
+        font-size: 14px
+@media (max-width: 400px)
+    .support-bottom__img
+        display: none
+    .support-bottom__message
+        margin-left: 1px
+    .your-message
+        align-items: flex-end
+        margin-left: 15px
+    .support-bottom__wrapper
+        padding: 10px 25px
+    .support-message
+        margin-left: -26px
+

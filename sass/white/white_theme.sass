@@ -1,0 +1,821 @@
+@import "../_let"
+$primary-blue_white: #00D3FF
+$primary_white: #fff
+$dark-Theme_white: #F0EEFC
+$gamer-winsInfoBG_white: #E8E5F8
+$active-item_white: linear-gradient(90deg, #0085FF 3.57%, $primary-blue_white 95.71%)
+
+$primary_icon_fill_white: #C3BCEA
+
+$primary_text_color_white: #000
+
+$purple_text_color: #B4AED2
+
+$error_red_gradient: linear-gradient(141.01deg,#b33030 14.05%,#ff5858 86.09%)
+
+$scrollbar_color: #C2BEDC
+
+$scrollbar_back: #DBD7EE
+
+$link_color: #CCC6F2
+
+$gray_bg: #E3E3F8
+
+$range_bg: #D7D7F3
+
+$message_bg: #E0DDF0
+
+$message_color: #A19BC0
+$textarea-message-color: #B1ACC7
+
+$bonuses_bg: #EAE9FF
+
+$history_bg: #E0E2FF
+
+$referral_items_bg: #E9E6FD
+$referral_items_color: #BEBAD9
+
+body.is-white
+	background: $dark-Theme_white
+	& .right-sidebar__chat , .left-sidebar, .game-item__prize:after, .game-item__benefit, .game-item__btn
+		background: $gamer-winsInfoBG_white
+	& .game-item__benefit
+		color: $purple_text_color
+	& .game-item__btn_done
+		background: $active-item_white
+	& .game-item__btn_error
+		background: $error_red_gradient
+	& .game-mode
+		color: $primary_text_color_white
+	& .game-mode__one, .game-mode__three, .game-mode__two
+		background: $gamer-winsInfoBG_white
+		& path
+			fill: $primary_icon_fill_white
+			stroke: none
+	& .game-mode_active
+		background: $active-item_white
+		& path
+			fill: $primary_white
+	& .craft
+		position: relative
+		z-index: 1
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			z-index: -1
+			background: url(../img/svg/crash-bg.svg) right -5px top 5px
+			opacity: 0.2
+	& .game-mode, .game-item, .nav, .craft, .center-content-bottom, .primary-border__dot::before, .selectric, .sound
+		background: $primary_white
+	& .selectric .label
+		color: $primary_text_color_white
+		font-weight: 900
+	& .sound
+		border-color: $primary-blue_white
+
+	& .right-sidebar__chat-bottom::-webkit-scrollbar, .support-bottom__wrapper::-webkit-scrollbar, #input-send::-webkit-scrollbar, .user__tabs__inventory::-webkit-scrollbar, .user__tabs__history::-webkit-scrollbar, .user__tabs__bottom::-webkit-scrollbar
+		width: 7px
+		height: 7px
+		background-color: $scrollbar_back
+		border-radius: 100px
+
+	& .right-sidebar__chat-bottom::-webkit-scrollbar-thumb, .support-bottom__wrapper::-webkit-scrollbar-thumb, #input-send::-webkit-scrollbar-thumb, .user__tabs__inventory::-webkit-scrollbar-thumb, .user__tabs__history::-webkit-scrollbar-thumb, .user__tabs__bottom::-webkit-scrollbar-thumb
+		background-color: $scrollbar_color
+		border-radius: 100px
+
+	& .right-sidebar__chat-bottom::-webkit-scrollbar-corner, .support-bottom__wrapper::-webkit-scrollbar-corner, #input-send::-webkit-scrollbar-corner, .user__tabs__inventory::-webkit-scrollbar-corner, .user__tabs__history::-webkit-scrollbar-corner, .user__tabs__bottom::-webkit-scrollbar-corner
+		background-color: transparent
+	.right-sidebar__inventory-bottom__wrapper::-webkit-scrollbar
+		width: 7px
+		height: 7px
+		background-color: $scrollbar_back
+		border-radius: 100px
+
+	& .right-sidebar__inventory-bottom__wrapper::-webkit-scrollbar-thumb
+		background-color: $scrollbar_color
+		border-radius: 100px
+
+	& .right-sidebar__inventory-bottom__wrapper::-webkit-scrollbar-corner
+		background-color: transparent
+
+	& .left-sidebar::-webkit-scrollbar
+		width: 7px
+		height: 7px
+		background-color: $scrollbar_back
+		border-radius: 100px
+
+	& .left-sidebar::-webkit-scrollbar-thumb
+		background-color: $scrollbar_color
+		border-radius: 100px
+
+	& .left-sidebar::-webkit-scrollbar-corner
+		background-color: transparent
+	& .nav:before, .nav:after
+		background: url('../img/white/img/nav-border.svg')
+	& .nav_active
+		& .link__text
+			color: $primary_text_color_white
+		& .nav__link svg > path 
+			fill: $primary-blue_white
+		&:after
+			opacity: 0.3
+			background-size: 65px
+			transform: translateX(-30px)
+	& .link__text
+		color: $link_color
+	& .nav__li svg > path 
+		fill: $link_color
+	& .hidden-menu
+		background: $primary_white
+		box-shadow: 0 15px 65px $gamer-winsInfoBG_white
+		&:before
+			border-bottom: 20px solid $primary_white
+	& .craft__left__input, .craft__left__bets__btn, .filter .selectric-wrapper>.selectric, .craft__right
+		background: $gray_bg
+		box-shadow: none
+		color: $primary_text_color_white
+		font-weight: normal
+	& .filter .selectric-wrapper>.selectric .label
+		font-weight: normal
+	& .craft__find, .craft__upload, .primary__btn, .bonuses__promocode__btn
+		background-color: $primary-blue_white
+	& .range
+		background: $range_bg
+	& .craft__right__price
+		background: $range_bg
+		& span
+			color: $primary_text_color_white
+	& .craft__center
+		border-color: $primary_white
+	& .win__regime__wrapper
+		border-color: $primary-blue
+	& .win__regime path
+		fill: $primary_icon_fill_white
+	& .craft__upload path
+		fill: $primary_white
+	& .craft__start
+		color: $primary_white
+	& .craft__find
+		background: url('../img/white/img/search.svg') no-repeat center 5px, $primary-blue
+	& .craft__start 
+		& img
+			z-index: -1
+		&:after
+			position: absolute
+			content: ''
+			width: 23px
+			height: 20px
+			background: url('../img/white/img/play-icon.svg') no-repeat top 2px right
+			z-index: 1
+	& .center-content__box-item
+		background: #fbfbfb
+	& .center-content__box-item-bottom::after
+		box-shadow: none
+	& .center-content__box-item-text h4
+		color: $primary_text_color_white
+	& .pagination__page
+		color: $primary_text_color_white
+		&_active
+			color: $primary_white
+	& .right-sidebar__chat-item-undertext .name
+		color: $primary_text_color_white
+	& .right-sidebar__chat-item-message, .right-sidebar__chat-send textarea
+		background: $message_bg
+		& p
+			color: $message_color
+	& .right-sidebar__chat-send textarea
+		color: $textarea-message-color
+		&::placeholder
+			color: $textarea-message-color
+	& .down-chat__img .time
+		color: $message_color
+	& .right-sidebar__noauthorize-text h3, .right-sidebar__chat-icon span, .chat-text p
+		color: $primary_text_color_white
+	& .right-sidebar__noauthorize-social .right-sidebar__social-vk, .right-sidebar__noauthorize-social .right-sidebar__social-fb, .right-sidebar__noauthorize-social .right-sidebar__social-st
+		background: $primary_white
+	& .right-sidebar__chat-icon 
+		position: relative
+		&:after
+			position: absolute
+			content: ''
+			background: url('../img/white/img/chat-icon.svg') no-repeat top 2px right
+			height: 87px
+			width: 90px
+			left: calc(50% - 13px)
+			transform: translateX(-50%)
+		& img
+			z-index: -1
+	& .right-sidebar__chat-link
+		background: $range_bg
+	& .logo, .top-bar_mobile__logo
+		background: url('../img/white/img/logo.svg') no-repeat
+		background-position-x: -21px
+		background-position-y: -21px
+		background-size: 207px
+	& .logo a:after, .top-bar_mobile__logo a:after
+		display: none
+	& .right-sidebar__chat-link
+		& img
+			display: none
+		&:after
+			content: ''
+			position: absolute
+			background: url('../img/white/img/main-arrow.svg') no-repeat
+			height: 14px
+			width: 8px
+	& .right-sidebar__chat-rules a span
+		color: $message_color
+		border-color: $message_color
+	& .chat-text span
+		color: $message_color
+	& .nav__li__more:after
+		background: $link_color
+	& .win__regime-visible::before
+		background: $primary-blue_white
+	& .win-regime__mobile span
+		color: $primary_white
+	& .win-regime__mobile svg
+		& path
+			fill: #fff !important
+	& .win-regime__mobile
+		background: $primary-blue
+		border: 0
+	& .accordionItemHeading
+		background: $primary_white
+		color: #000
+	& .open .accordionItemContent
+		background: $primary_white
+	& .open .accordionItemHeading::before
+		background: #EEF0FF
+	& .close .accordionItemImg, .open .accordionItemImg
+		opacity: 0.3
+
+	& .page__title
+		color: $primary_text_color_white
+	& .page__subtitle
+		color: $link_color
+		background: $dark-Theme_white
+	& .page__top__left:before
+		opacity: 0.15
+	& .treatment__btn
+		color: $primary_white
+		&:after
+			background: url('../img/white/img/treatment-icon.svg') no-repeat center
+			content: ''
+			position: absolute
+			width: 30px
+			height: 30px
+			left: 30px
+			transform: translateY(-50%)
+			top: 50%
+	& .treatment__btn__img
+		z-index: -1
+	& .chat-underline
+		background: #DDD8F8
+	& .accordionWrapper
+		background: $dark-Theme_white
+
+	& .right-sidebar__noauthorize-text h3::after
+		opacity: 0.3
+	& .right-sidebar__pay, .right-sidebar__action__btn
+		background: $primary_white
+		& .right-sidebar__pay-numb span
+			color: $primary_text_color_white
+	& .primary-btn__notification img
+		opacity: 0.5
+
+
+
+	& .bonuses__promocode, .bonuses__condition
+		background: $primary_white
+
+	& .bonuses__promocode, .bonuses__condition, .livedrio-box__item
+		box-shadow: 0 15px 45px #e7e5f8
+
+
+	& .bonuses__promocode__input, .bonuses__promocode__alert
+		background: $bonuses_bg
+		border-color: transparent
+		box-shadow: none
+
+	& .bonuses__promocode__alert
+		&__title
+			color: $primary_text_color_white
+		&__text
+			color: $link_color
+
+	& .bonuses__condition
+		&__title
+			color: $primary_text_color_white
+		&__content__item
+			color: #77738a
+			&:after
+				border-color: $primary-blue_white
+				background-color: transparent
+			&_active
+				color: $primary_text_color_white
+				&:after
+					background-color: $primary-blue_white
+
+	& .bonuses__name__days__item
+		background-color: $primary_white
+		color: $primary_text_color_white
+		&__day
+			color: $link_color
+
+
+	& .history__item
+		background-color: $primary_white
+		&__chance, &__people, &__price
+			background-color: $history_bg
+		& .block__arrow
+			background: url(../img/white/img/block-arrow.svg) no-repeat
+			background-position: -25px
+			background-position-y: -25px
+
+
+	& .support-bottom, .support-bottom__wrapper
+		background-color: $primary_white
+	& .support-bottom__h h3
+		color: $primary_text_color_white
+	& .support-bottom__message p
+		background-color: #F6F4FF
+	& .support-bottom__chat .your-message .support-bottom__message::after, .support-bottom__message::before
+	    border-left: 15px solid #F6F4FF
+	& .support-bottom__info span
+		color: #888ab2
+	& .support-bottom__chat-send
+		background-color: #F6F4FF
+		& textarea
+			color: #888ab2
+		& textarea::placeholder
+			color: #BBB6D0
+
+
+
+	& .user__info, .user__referrals, .user__limits, .user__trade, .user__tabs__top, .user__limits__item
+		background-color: $primary_white
+		box-shadow: 0 15px 45px #e7e5f8
+
+	& .user__info:after, .user__info:before
+		opacity: 0.3
+
+	& .user__info__settings
+		opacity: 0.5
+	& .user__tabs__top__item
+		color: #CBC6E5
+	& .user__tabs__top__item path
+		fill: #CBC6E5
+	& .user__tabs__top__item_active
+		color: $primary_text_color_white
+	& .user__tabs__top__item_active path
+		fill: $primary-blue
+	& .user__info__name, .user__info__balance
+		color: $primary_text_color_white
+	& .user__trade__bottom__input
+		background-color: $gamer-winsInfoBG_white
+		border-color: transparent
+		color: $primary_text_color_white
+		&::placeholder
+			color: #C6C1DE
+	& .user__trade__bottom__btn
+		background-color: $primary-blue_white
+		& svg path
+			fill: $primary_white
+
+	& .user__trade__top__link
+		color: $link_color
+		background: url('../img/white/img/gray-arrow.svg') no-repeat right center
+		&:after
+			background-color: $link_color
+	& .user__referrals__level__number, .user__referrals__level_to
+		color: $primary_text_color_white
+	& #svg circle
+		stroke: $gamer-winsInfoBG_white
+	& .user__limits__item
+		&__title
+			color: $primary_text_color_white
+		&__subtitle
+			color: #D3CFE8
+
+
+	& .user__tabs__history__table tr, .user__tabs__history__heading th, .user__tabs__history__item td
+		background: $primary_white
+		box-shadow: none
+
+	& .user__tabs__history__heading th, .user__tabs__history__item__id, .user__tabs__history__item__date
+		color: #cbc6e5
+
+
+	& .livedrio-info, .livedrio-box__item
+		background-color: $primary_white
+		color: $primary_text_color_white
+
+	& .livedrio-box__item-item svg rect
+		fill: #fff
+	& .win__regime_active path
+		fill: $primary_white !important
+	& .win__regime_active
+		color: $primary_white
+		background: $primary-blue_white
+	& .livedrio-box__item-user span
+		color: #535478
+
+
+	& .gamer__info, .gamer-wins__info, .gamer-wins__box-item, .gamer__info
+		background-color: $primary_white
+		box-shadow: 0 15px 45px #e7e5f8
+	& .gamer-wins__box-id, .gamer-wins__box-time span
+		color: $primary_text_color_white
+	& .gamer-dots-first, .gamer-dots-last
+		opacity: .2
+
+
+
+
+	& .roll-winner, .roll-info, .roll-bet, .roll-luck
+		background-color: $primary_white
+		box-shadow: none
+	& .roll-luck__btn
+		color: $primary_text_color_white
+		background: transparent
+	& .winner__info__text, .bet__btn, .bet__input
+		background-color: $gamer-winsInfoBG_white
+	& .info__item__value, .bet__input
+		color: $primary_text_color_white
+
+	& .bet__input
+		box-shadow: none
+		&::placeholder
+			color: $primary_text_color_white
+
+	& .roll-start
+		background: $primary-blue_white
+		color: $primary_white
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			height: 43px
+			width: 46px
+			background: url('../img/white/img/roulette-start.svg')
+			top: calc(50% + 3px)
+			right: 11px
+			transform: translateY(-50%)
+	& .roll-start__img
+		display: none
+
+	& .roulette__number__game__wrapper
+		background-color: $gamer-winsInfoBG_white
+		box-shadow: none
+
+	& .roulette
+		background-color: $primary_white
+
+
+	& .roulette-wrapper:after, .roulette-wrapper:before
+		background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)
+		box-shadow: none
+	& .roulette:before, .roulette:after
+		background: url('../img/white/img/roulette-arrow.svg')
+
+	& .roulette__item:before
+		display: none
+
+	& .roulette__item_blue
+		background: linear-gradient(180deg, rgba(114, 157, 254, 0.45) 0%, #729DFE 100%)
+
+	& .roulette__item_pink
+		background: linear-gradient(180deg, rgba(189, 51, 142, 0.45) 0%, #BD338E 100%)
+	& .roulette__item_red
+		background: linear-gradient(180deg,rgba(189,51,142,.45) 0,#b54248 100%)
+
+	& .roulette__item_yellow
+		background: linear-gradient(180deg, rgba(253, 188, 54, 0.45) 0%, #DDA435 100%)
+
+	& .roulette__item_yellow > .roulette__item__image__wrapper:after
+		background: url('../img/white/img/roulette-item-bg-yellow.svg') no-repeat center
+
+	& .roulette__item_pink > .roulette__item__image__wrapper:after
+		background: url('../img/white/img/roulette-item-bg-pink.svg') no-repeat center
+	& .roulette__item_red > .roulette__item__image__wrapper:after
+		background: url('../img/white/img/roulette-item-bg-red.svg') no-repeat center
+
+	& .roulette__item__luck
+		background: $primary_white
+
+
+	& .referral-box
+		background: $primary_white
+
+	& .referral-box__left, .referral-information__item, .referral-information__promocode
+		background-color: $referral_items_bg
+
+	& .ProgressBar-background
+		stroke: #E0DDF5
+
+	& .referral-box__level-h h5, .referral-information__top-text span, .referral-level__h, .referral-information__renewal-number, .referral-promocode, .referral-information__center-text p:first-child
+		color: $primary_text_color_white
+
+	& .referral-level__p, .referral-information__top-text p
+		color: $referral_items_color
+
+	& .referral-box__level-text p, .referral-information__center-text span, .referral-information__promocode-text p, .referral-information__renewal-text
+		color: #B6B1DC
+
+	& .referral-information__line svg rect:first-child
+		fill: #E8E5FE
+
+
+	& .referral-information__promocode-img svg path
+		fill: #CBC7EA
+
+
+	& .referral-bottom__item
+		background-color: $primary_white
+
+	& .referral-bottom__item-percentage h5, .referral-bottom__item-extra h5
+		color: $primary_text_color_white
+
+
+	& .user__tabs__bottom
+		background-color: $primary_white
+	& .tabs__bonuses__accounts__title, .tabs__settings__accounts__title
+		color: $primary_text_color_white
+
+	& .tabs__account__bottom__block_connect_ready .tabs__account__bottom__block__action
+		position: relative
+		& img
+			display: none
+		&:after
+			position: absolute
+			content: ''
+			width: 10px
+			height: 10px
+			background: url('../img/white/img/ic-actions-plus.svg')
+
+
+	& .tabs__account__bottom__block, .tabs__settings__vk
+		box-shadow: none
+		background-color: #EAE7FF
+	& .tabs__settings__vk
+		&-span
+			color: $primary_text_color_white
+
+	& .tabs__settings__vk-plus
+		background-color: #ddd9ff
+		& a
+			color: $primary_text_color_white
+	& .tabs__settings__coin-plus svg path
+		fill: #000
+
+	& .tabs__account__bottom__block__title
+		color: $primary_text_color_white
+
+	& .tabs__account__bottom__block__action
+		background-color: #DDD9FF
+
+
+	& .tabs__settings__status, .tabs__settings__inputs input
+		background-color: #eae7ff !important
+		box-shadow: 0 15px 45px #e7e5f8
+
+	& .tabs__settings__inputs button
+		background-color: #eae7ff !important
+
+	& .tabs__settings__inputs
+		& input
+			color: #a19bc0
+			&::placeholder
+				color: #a19bc0
+		& .tabs__settings__inputs_action
+			& img
+				display: none
+			&:after
+				position: absolute
+				content: ''
+				width: 18px
+				height: 12px
+				background: url('../img/white/img/ic-actions-check-simple-grey.svg')
+
+	& .tabs__settings__status_left__title
+		color: #4e506b
+
+	& .tabs__settings__status_right__li
+		color: $message_color
+
+
+	& .crash-info__left, .crash-info__right,
+		background-color: $primary_white
+
+	& .crash-info__balance span
+		color: $primary-blue
+
+	& .crash-info__left .crash-info__item .info__item__title
+		color: #C8C2E5
+
+	& .roll-luck__btn a
+		color: $primary_text_color_white
+
+	& .action__center__label
+		color: #CECAE5
+
+	& .crash:after
+		opacity: 0.07
+
+	& .crash__left:before
+		background-color: transparent
+
+
+	& .crash__action__top
+		background-color: #ECE9FF
+		box-shadow: none
+
+
+	& .action__center__input
+		background-color: #ECE9FF
+		box-shadow: none
+		color: $primary_text_color_white
+		&::placeholder
+			color: $primary_text_color_white
+
+	& .action__center__btn
+		background-color: #2DA5FF
+		border-color: transparent
+
+	& .action__top__span:after, .action__top__arrow
+		background: #2DA5FF
+
+	& .action__top__arrow__img
+		background: url('../img/white/img/crash-arrows.svg') no-repeat center top 75%
+
+	& .action__top__span
+		color: $primary_text_color_white
+
+
+	& .right__inventory__btns__select .selectric, .right__inventory__btns__input
+		box-shadow: none
+
+	& .right__inventory__btns__input
+		background-color: $primary_white
+		color: $primary_text_color_white
+
+	& .inventory__btn__change
+		background-color: #3d3e62
+		color: $primary_white
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: 18px
+			height: 18px
+			background: url('../img/white/img/upload.svg')
+			right: 34px
+	& .inventory__btn__change img
+		opacity: 0
+	& .inventory__btn__get
+		background: $primary-blue
+
+	& .right-sidebar__tabs-top .right-sidebar__chat-icon:after
+		display: none
+	& div[tab-name="chat"] svg
+		& path:nth-child(1), path:nth-child(2), path:nth-child(3)
+			fill: #fff
+	& .right-sidebar__tabs-top svg
+		& path:nth-child(1)
+			fill: #fff
+
+	& div[data-remodal-id="modal2"]
+		background-color: $primary_white
+
+	& .modal__title:after
+		opacity: 0.1
+
+	& .modal__title__h3
+		color: $primary_text_color_white
+
+	& .modal__input__label
+		color: #B0B2D8
+
+	& .modal__input
+		background-color: #E7E8FF
+		box-shadow: 0px 5px 35px rgba(224, 220, 248, 0.45)
+		color: $primary_text_color_white
+		&::placeholder
+			color: $primary_text_color_white
+
+	& .modal__types__pay a
+		background: linear-gradient(180deg, rgba(23, 20, 36, 0) 0%, rgba(140, 198, 83, 0.0675) 100%), #E7E8FF
+
+	& .modal__type__pay__title, .modal__bonus__total__number
+		color: $primary_text_color_white
+
+	& .modal__promocode__input
+		background-color: #E7E8FF
+		box-shadow: 0px 5px 35px rgba(224, 220, 248, 0.45)
+		color: #A8AADB
+		&::placeholder
+			color: #A8AADB
+
+	& .modal__promocode__btn
+		color: $primary_white
+		box-shadow: 0px 15px 35px rgba(45, 165, 255, 0.45)
+
+	& .modal__alert
+		background: #E7E8FF
+		box-shadow: 0px 5px 35px rgba(224, 220, 248, 0.45)
+
+	& .modal__alert__text
+		color: #888AB6
+
+
+	& .roulette__item_yellow .roulette__item__luck
+		background-color: $primary_text_color_white
+		color: $primary_white
+
+	& .right-sidebar__tabs-top .right-sidebar__tab_active:before
+		position: absolute
+		content: ''
+		width: 100%
+		height: 2px
+		background: -webkit-gradient(linear,left top,right top,color-stop(3.57%,#0085ff),color-stop(95.71%,#00d3ff))
+		background: -o-linear-gradient(left,#0085ff 3.57%,#00d3ff 95.71%)
+		background: linear-gradient(90deg,#0085ff 3.57%,#00d3ff 95.71%)
+		bottom: -26px
+
+
+	& div[data-remodal-id="modalTelega"]
+		background-color: $primary_white
+
+	& .crash__sale
+		background-color: $primary_white
+		&:before
+			display: none
+	& .crash__sale__prise
+		border-color: $primary-blue
+	& .crash__sale__prize_done
+		color: #5ca746
+	& .crash__sale_error .crash__sale__prize
+		color: #ee3f3f
+
+	& .crash__sale__prize
+		color: #5ca746
+
+	& .crash__sale
+		border-color: transparent
+		& .block__arrow
+			background: url(../img/white/img/block-arrow.svg) no-repeat
+			background-position: -25px
+			background-position-y: -25px
+
+	& div[data-remodal-id="modal3"]
+		& .block__arrow
+			background: url(../img/white/img/block-arrow.svg) no-repeat
+			background-position: -25px
+			background-position-y: -25px
+
+	& .crash__sale_win
+		border-color: #5ca746
+
+	& .crash__sale_error
+		border-color: #ee3f3f
+
+
+
+	& .left-sidebar__online-text h6
+		color: $primary_text_color_white
+
+	& .game-item__prize_done:after
+		background: #d3f9c9!important
+
+	& .crash, div[data-remodal-id="modal2"], .crash-info__left, .crash-info__right, .accordionWrapper, .craft__right, .center-content__box-item, .support, .user__info, .user__referrals, .user__limits, .user__trade, .user__tabs__top, .livedrio-info, .livedrio-box__item, .gamer-wins__info, .gamer-wins__box-item, .gamer__info, .roll-info, .roulette-wrapper, .referral-bottom__item, .referral-box__left, .referral-information__item
+		& svg rect
+		    opacity: 0.2
+		& svg g > rect
+			opacity: 1
+
+
+@media (max-width: 1440px)
+	body.is-white
+		& .nav_active:before
+			bottom: -39px
+		& .nav_active:after
+			transform: translateX(-50%)
+@media (max-width: 768px)
+	body.is-white
+		& .treatment__btn:after
+			left: 50%
+			transform: translate(-50%, -50%)
+
+@media (max-width: 390px)
+	body.is-white
+		.top-bar_mobile__logo
+			margin-right: 0
+			background-position-x: -16px
+			background-position-y: -11px
+			background-size: 157px
+			width: 100px

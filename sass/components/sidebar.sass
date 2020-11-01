@@ -1,0 +1,602 @@
+.left-sidebar-wrapper
+	max-width: 480px
+	width: 100%
+	padding-bottom: 90px
+.right-sidebar-wrapper
+	max-width: 480px
+	width: 100%
+
+.right-sidebar
+	position: fixed
+	height: 100%
+	overflow: scroll
+	&-unautirize
+		overflow: hidden
+	&__chat
+		min-height: calc(100% - 123px) !important
+		padding-bottom: 0 !important
+.center-content-bottom
+	max-width: unset !important
+.right-sidebar__noauthorize
+	display: flex
+	justify-content: flex-start
+	width: 100%
+	&-text
+		position: relative
+		width: auto
+		& h3
+			font-size: 14px
+			font-weight: bold
+			color: #ffffff
+			&::before
+				content: ''
+				position: absolute
+				width: 38px
+				height: 3px
+				border-radius: 0px 5px 5px 0px
+				bottom: -7px
+				background: #00d3ff
+			&::after
+				content: ''
+				position: absolute
+				height: 72px
+				width: 72px
+				background: url(../img/menu-icons/active-bg.svg) no-repeat center
+				z-index: -1
+				left: -35px
+				bottom: -35px
+	&-social
+		display: flex
+		& .right-sidebar__social-vk
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			background: #17182E
+		& .right-sidebar__social-fb
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			background: #17182E
+			margin: 0 10px
+		& .right-sidebar__social-st
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+			background: #17182E
+	
+.pb90
+	padding-bottom: 90px
+
+.left-sidebar
+	margin-bottom: 90px
+	box-sizing: border-box
+	position: fixed !important
+	max-width: 480px
+	width: 100%
+	height: 100%
+	overflow: scroll
+	background: #131331
+	padding: 0px 30px
+	color: #fff
+	min-height: calc(100vh - 90px)
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 62px
+		background: url(../img/left-siderbar-bg.png) no-repeat center / cover
+		top: 0
+		left: 0
+		z-index: -1
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin: 35px 0 25px 0
+		&-box
+			display: flex
+			align-items: center
+			justify-content: flex-start
+		
+	&__options
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		margin-right: 10px
+		& img
+			display: block
+	&__online
+		display: none
+		&-text
+			margin-left: 8px
+			display: flex
+			flex-direction: column
+			& h6
+				font-size: 14px
+				font-weight: 700
+				color: #fff
+			& p
+				font-size: 12px
+				font-weight: 500
+				color: #4C5279
+	&__primary__border
+		width: 52.6px
+		height: 52.6px
+		&_btn
+			width: 80px
+			height: 44px
+			border-radius: 100px
+			display: flex
+			align-items: center
+			justify-content: center
+
+.selectric
+    height: 45px
+    border-radius: 100px
+    padding-left: 55px
+    width: 86px
+    display: flex
+    align-items: center
+    background: #17182E
+    color: #fff
+    border: 0
+    & .label
+    	font-family: 'Gilroy'
+    	margin: 0
+    	margin-left: 6px
+    &-items > .selectric-scroll > ul > li
+    	font-family: 'Gilroy'
+    	display: -webkit-flex
+    	display: -moz-flex
+    	display: -ms-flex
+    	display: -o-flex
+    	display: flex
+    	align-items: center
+    	justify-content: center
+
+
+.selectric-open
+	z-index: 4
+
+.selectric .button
+	background-color: transparent
+
+.logo, .top-bar_mobile__logo
+	position: relative
+	z-index: 1
+	background: url(../img/logo.svg) center center no-repeat
+	width: 225px
+	height: 50px
+	background-position-y: 3px
+	background-size: 207px
+	& a
+		display: block
+		width: 132px
+		height: 74px
+		position: relative
+		
+
+.language
+	position:relative
+	& .selectric
+		width: 135px !important
+		padding-left: 0 !important
+		justify-content: center
+		align-items: center
+
+.sound
+	margin-right: -45px
+	z-index: 5
+	width: 45px
+	height: 45px
+	border: 1px solid #1f9bb5
+	background: #17182E
+	box-sizing: border-box
+	border-radius: 100px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+
+.game-mode
+	background: #17182E
+	border: 1px solid rgba(0, 211, 255, 0.15)
+	box-sizing: border-box
+	border-radius: 100px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding-left: 20px
+	height: 60px
+	margin-bottom: 30px
+
+	&__right__content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	&__one, &__two, &__three
+		width: 45px
+		height: 45px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 100px
+		cursor: pointer
+		background: #121327
+		margin-right: 15px
+	&_active
+  		background: linear-gradient(90deg, #0085FF 3.57%, #00D3FF 95.71%)
+  		& path
+  			fill: #fff
+  			stroke: none
+	&__left__content
+  		& span
+  			font-size: 14px
+
+.game-item
+    height: 80px
+    width: 100%
+    display: -o-flex
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: #080828
+    margin-bottom: 17px
+    position: relative
+    border-radius: 5.5px
+    &__avatar
+    	margin-left: 15px
+    &__btn
+    	margin-right: 15px
+    	background: #242540
+    	border-radius: 100px
+    	width: 40px
+    	height: 40px
+    	display: -webkit-flex
+    	display: -moz-flex
+    	display: -ms-flex
+    	display: -o-flex
+    	display: flex
+    	align-items: center
+    	justify-content: center
+	    &_done
+	    	background: linear-gradient(90deg, #0085FF 3.57%, #00D3FF 95.71%)
+	    	position: relative
+	    	z-index: 1
+	    	&:after
+	    		position: absolute
+	    		z-index: -1
+	    		content: ''
+	    		width: 70%
+	    		height: 90%
+	    		filter: blur(15px)
+	    		background: linear-gradient(90deg, #0085FF 3.57%, #00D3FF 95.71%)
+	    &_error
+	    	background: linear-gradient(141.01deg, #B33030 14.05%, #FF5858 86.09%)
+	    	position: relative
+	    	z-index: 1
+	    	&:after
+	    		position: absolute
+	    		z-index: -1
+	    		content: ''
+	    		width: 70%
+	    		height: 90%
+	    		filter: blur(15px)
+	    		background: linear-gradient(141.01deg, #B33030 14.05%, #FF5858 86.09%)
+    &__prize
+    	position: relative
+    	&:before
+    		content: ''
+    		position: absolute
+    		background: url(../img/svg/handgun-bg.svg) no-repeat center / cover
+    		width: 100%
+    		height: 100%
+    		z-index: 1
+    	& img
+    		position: relative
+    		z-index: 3
+    &__benefit
+    	background: #21233B
+    	border-radius: 100px
+    	padding: 0px 19px
+    	height: 35px
+    	display: -webkit-flex
+    	display: -moz-flex
+    	display: -ms-flex
+    	display: -o-flex
+    	display: flex
+    	align-items: center
+    	justify-content: center
+    	font-family: 'Gilroy'
+    	font-size: 13px
+    	font-weight: 500
+    	& span
+    		font-family: 'Gilroy'
+    		font-size: 13px
+    		font-weight: 500
+
+    &__price
+    	background: linear-gradient(90deg, #0085FF 3.57%, #00D3FF 95.71%)
+    	box-shadow: 0px 4px 15px rgba(0, 211, 255, 0.25)
+    	border-radius: 100px
+    	width: 70px
+    	height: 35px
+    	display: -webkit-flex
+    	display: -moz-flex
+    	display: -ms-flex
+    	display: -o-flex
+    	display: flex
+    	align-items: center
+    	justify-content: center
+    	font-family: 'Gilroy'
+    	font-size: 13px
+    	font-weight: 600
+    	& span
+    		font-family: 'Gilroy'
+    		font-size: 13px
+    		font-weight: 600
+
+.game-item__prize:after
+	content: ''
+	position: absolute
+	width: 100%
+	height: 100%
+	background: #00d3ff
+	z-index: 0
+	opacity: 0.2
+	filter: blur(15px)
+	left: 0
+	
+
+
+
+.right-sidebar
+	margin-left: auto
+	margin-top: 23px
+	padding-top: 10px
+	&__action__btn
+		cursor: pointer
+	&__top
+		display: flex
+		justify-content: space-around
+		align-items: center
+		width: 100%
+		max-width: 480px
+		margin-bottom: 21px
+	&__pay
+		display: flex
+		justify-content: space-around
+		align-items: center
+		width: 200px
+		height: 50px
+		background: #17182E
+		border-radius: 100px
+		box-sizing: border-box
+		padding-left: 8px
+		&-numb
+			font-weight: 600
+			& span
+				color: #fff
+		&-img
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+	&__btn
+		width: 115px
+		display: flex
+		justify-content: space-around
+		align-items: center
+		height: 50px
+	&__user
+		& .primary-border
+			width: 52.6px
+			height: 52.6px
+	&__chat
+		height: calc(100% - 190px)
+		width: 100%
+		max-width: 480px
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: #1b1c32
+		min-height: calc(100vh - 123px)
+		padding-bottom: 90px
+		padding-top: 22px
+		transition: 0.7s all ease
+		border-radius: 25px 0 0 0 
+		&-parent
+			width: 280px
+			display: flex
+			justify-content: space-around
+			align-items: center
+		&-send
+			position: relative
+			margin-bottom: 10px
+			& textarea
+				box-sizing: border-box
+				margin-top: 6px
+				min-height: 80px
+				width: 420px
+				font-size: 16px
+				font-family: 'TT Norms', sans-serif
+				resize: none
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				height: 36px
+				color: #43466B
+				background: #131429
+				border-radius: 8px
+				border: none
+				padding: 24px 50px 24px 30px
+				outline: none
+
+				&::-webkit-input-placeholder
+					  color: #43466B
+				&::-moz-placeholder
+				  color: #43466B
+				&:-ms-input-placeholder
+				  color: #43466B
+				&:-moz-placeholder
+				  color: #43466B
+			&-unautirize
+				display: none
+			& button
+				position: absolute
+				border: none
+				outline: none
+				background: none 
+				right: 5%
+				top: calc(50% + 6px)
+				transform: translateY(-50%)
+				cursor: pointer
+		&-bottom
+			height: 88%
+			overflow-y: scroll
+		&-top
+			width: 100%
+			max-width: 480px
+			display: flex
+			justify-content: space-around
+			align-items: center
+			padding-bottom: 22px
+		&-online
+			width: 80px
+			height: 33px
+			display: flex
+			justify-content: space-around
+			align-items: center
+
+		&-icon
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 34px
+			& span
+				font-weight: bold
+				color: #fff
+		&-rules
+			& a 
+				display: flex
+				justify-content: space-around
+				align-items: center
+				height: 40px
+				width: 200px
+				text-decoration: none
+				& span
+					color: #535674
+					border-bottom: 1px solid  #535674
+					font-weight: 500
+					font-size: 14px
+
+		&-link
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 40px
+			width: 40px
+			border-radius: 6px
+			border: none
+			background: #14152B
+			cursor: pointer
+		&-item
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin: 20px 0 0 10px
+			&:last-child
+				margin-bottom: 30px
+			&-undertext
+				display: flex
+				justify-content: space-between
+				width: 340px
+				margin: 9px 0
+				& .name
+					font-weight: bold
+					color: #C7CBE8
+					font-size: 14px
+			&-message
+				width: max-content
+				max-width: 230px
+				word-wrap: break-word
+				height: max-content
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				padding: 11px 17px			
+				background: #242541
+				border-radius: 3px
+				& p 
+					font-size: 14px
+					color: #676B94
+					font-weight: 500
+			& .primary-border
+				width: 52.6px
+				height: 52.6px
+.your-message
+	transform: scaleX(-1)
+	margin-right: 10px
+	& .time
+		transform: scaleX(-1)
+	& .name
+		transform: scaleX(-1)
+	& .message
+		transform: scaleX(-1)
+	& img
+		transform: translate(-50%, -50%) scaleX(-1)
+
+
+
+
+.down-chat
+	&__text
+		margin-left: 10px
+	&__img
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: center
+		& .time
+			margin-top: 10px
+			font-weight: 500
+			font-size: 12px
+			color: #434872
+.item__home__benefit
+	border-radius: 50%
+	width: 30px
+	height: 30px
+	padding: 0
+.craft__left__flex__inputs > input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+    -webkit-appearance: none
+.top-bar_mobile__logo a img
+	height: 70px

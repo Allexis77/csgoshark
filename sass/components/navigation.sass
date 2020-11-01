@@ -1,0 +1,82 @@
+.nav
+	background: #1B1C32
+	padding: 0px 30px
+	height: 90px
+	position: relative
+	border-radius: 8px
+	margin-bottom: 20px
+	&__ul
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-around
+		height: 100%
+	&__li
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		& svg > path
+			fill: #474965
+	&__link
+		text-decoration: none
+		color: #fff
+		font-family: "Gilroy"
+		font-weight: 900
+		font-size: 16px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		& svg
+			margin-right: 10px
+	&:after
+		content: ''
+		position: absolute
+		width: 75px
+		height: 104px
+		top: 50%
+		left: -35px
+		transform: translateY(-50%)
+		background: url(../img/menu-icons/nav-border.svg)
+	&:before
+		content: ''
+		position: absolute
+		width: 75px
+		height: 104px
+		top: 50%
+		right: -35px
+		transform: translateY(-50%) rotate(180deg)
+		background: url(../img/menu-icons/nav-border.svg)
+	&_active
+		position: relative
+		z-index: 2
+		& svg > path
+			fill: #00D3FF
+		& .link__text
+			color: #fff
+		&:after
+			content: ''
+			position: absolute
+			height: 100%
+			width: 74px
+			background: url(../img/menu-icons/active-bg.svg) no-repeat center
+			z-index: -1
+			left: 50%
+			transform: translateX(-50%)
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 2px
+			bottom: 0
+			background: #00D3FF
+
+.link__text
+	color: #474965

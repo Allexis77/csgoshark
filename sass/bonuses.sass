@@ -1,0 +1,243 @@
+@import "_let"
+
+.bonuses
+	&__promocode
+		background: $dark-BG
+		box-shadow: 0px 15px 45px $dark-BoxShadow
+		box-sizing: border-box
+		border-radius: 6px
+		padding: 35px 25px
+		box-sizing: border-box
+		display: flex
+		align-items: center
+		justify-content: center
+		&__input
+			background: $dark-BG
+			border: 1px solid $black-blue
+			box-sizing: border-box
+			box-shadow: 0px 15px 45px rgba(23, 24, 46, 0.25)
+			border-radius: 100px
+			width: 380px
+			height: 50px
+			text-align: center
+			color: $text-white
+			text-transform: uppercase
+			&::placeholder
+				color: $text-placeholder
+				text-transform: none !important
+		&__btn
+			width: 140px
+			height: 50px
+			background: linear-gradient(89.44deg, rgba(0, 211, 255, 0.25) 1.28%, rgba(0, 211, 255, 0) 51.53%, rgba(0, 211, 255, 0.25) 98.73%)
+			border: 1.5px solid $primary-blue
+			box-sizing: border-box
+			border-radius: 100px
+			color: $text-white
+			cursor: pointer
+			margin: 0 auto
+		&__alert
+			width: 270px
+			height: 80px
+			background: $black-alert
+			box-shadow: 0px 15px 45px $dark-BoxShadow
+			border-radius: 6px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			&__img
+				margin-left: 20px
+			&__title
+				font-size: 14px
+				font-weight: bold
+				color: $text-white
+			&__text
+				font-weight: 600
+				color: $blue-text
+				font-size: 12px
+				line-height: 12px
+				display: block
+				margin-top: 3px
+
+	&__condition
+		margin-top: 30px
+		background: $dark-BG
+		box-shadow: 0px 15px 45px $dark-BoxShadow
+		border-radius: 6px
+		box-sizing: border-box
+		padding: 35px
+		&__title
+			font-weight: bold
+			font-size: 16px
+			line-height: 19px
+			letter-spacing: 0.03em
+			color: $text-white
+			margin-bottom: 30px
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				width: 25px
+				height: 4px
+				left: 0
+				top: calc(100% + 8px)
+				background: $active-item
+				border-radius: 100px
+		&__content
+			&__item
+				padding-left: 35px
+				position: relative
+				margin-bottom: 20px
+				color: $text-white
+				font-size: 14px
+				line-height: 16px
+				&:after
+					content: ''
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+					width: 25px
+					height: 25px
+					background: $gray-bonus
+					border-radius: 100px
+					border: 1px solid transparent
+				&_active
+					color: $gray
+					&:after
+						border: 1px solid $primary-blue
+						background: url('../img/svg/done-icon.svg') no-repeat center transparent
+						background-size: 14px
+				&:last-child
+					margin-bottom: 0
+
+	&__name
+		margin-top: 40px
+		&__title
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			& .page__top__left:before
+				display: none
+			& .page__title__right
+				margin-left: 0
+		&__days
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: flex-start
+			margin-top: 30px
+			flex-wrap: wrap
+			&__item
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				flex-shrink: 0
+				color: $text-white
+				width: 100px
+				height: 100px
+				background: $dark-BG
+				border-radius: 6px
+				margin-right: 25px
+				margin-bottom: 15px
+				&:last-child
+					margin-right: 0
+				&__percent
+					margin-bottom: 10px
+				&__day
+					color: $gray-day
+
+@media (max-width: 1870px)
+	.bonuses__promocode__input
+		width: 35%
+		margin-right: 10px
+	.bonuses__promocode__alert
+		margin-left: 10px
+
+@media (max-width: 1700px)
+	.bonuses__promocode
+		flex-direction: column
+	.bonuses__promocode__input
+		margin-right: 0px
+		width: 80%
+	.bonuses__promocode__alert
+		margin-left: 0px
+	.bonuses__promocode__btn
+		margin: 20px 0px
+
+@media (max-width: 1605px)
+	.bonuses__promocode
+		flex-direction: row
+	.bonuses__promocode__input
+		width: 35%
+		margin-right: 10px
+	.bonuses__promocode__alert
+		margin-left: 10px
+	.bonuses__promocode__btn
+		margin: 0 auto
+@media (max-width: 1230px)
+	.bonuses__promocode
+		flex-direction: column
+	.bonuses__promocode__input
+		margin-right: 0px
+		width: 80%
+	.bonuses__promocode__alert
+		margin-left: 0px
+	.bonuses__promocode__btn
+		margin: 20px 0px
+	.bonuses__name__days__item
+		margin-right: 20px
+
+@media (max-width: 990px)
+	.bonuses__promocode
+		flex-direction: row
+	.bonuses__promocode__input
+		width: 35%
+		margin-right: 10px
+	.bonuses__promocode__alert
+		margin-left: 10px
+	.bonuses__promocode__btn
+		margin: 0 auto
+
+@media (max-width: 768px)
+	body 
+	    padding-bottom: 120px
+
+@media (max-width: 750px)
+	.bonuses__promocode
+		flex-direction: column
+	.bonuses__promocode__input
+		margin-right: 0px
+		width: 80%
+	.bonuses__promocode__alert
+		margin-left: 0px
+	.bonuses__promocode__btn
+		margin: 20px 0px
+	.bonuses__name__days__item
+		width: 94px
+		margin-right: 8px
+
+@media (max-width: 500px)
+	.bonuses__promocode__input
+		margin-right: 0px
+		width: 90%
+@media (max-width: 450px)
+	.bonuses__name__days__item
+		width: 48%
+		margin-right: 8px
+		&:nth-child(2n)
+			margin-right: 0
+

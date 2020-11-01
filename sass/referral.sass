@@ -1,0 +1,591 @@
+@import "_let"
+
+$primaryColor :  #00D3FF
+$mainColor :  #00D3FF
+$sizeContent : 130px
+$strokeLineCap : round
+
+.ProgressBar,
+.ProgressBar-contentCircle
+    display: table
+    height: $sizeContent
+    position: absolute
+    width: $sizeContent
+
+.ProgressBar-circle,
+.ProgressBar-background
+    //animation: progress 1s
+    fill: none // background color
+    stroke: $primaryColor // path color
+    stroke-width: 6px
+    stroke-linecap: $strokeLineCap
+    stroke-dasharray: 0 // circonférence du cercle
+    stroke-dashoffset: 0 // longeur du cercle
+    position: relative
+    z-index: 10
+
+.ProgressBar-background
+    stroke: $progressBar // path color
+    stroke-width: 6px
+    z-index: 0
+
+.ProgressBar-percentage
+    font-size: 40px
+    text-align: center
+    width: 100%
+    display: table-cell
+    vertical-align: middle
+
+
+
+
+.referral
+    &-top
+        margin: 17px 0
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        &__h
+            margin-bottom: 17px
+            display: flex
+            width: 100%
+            align-items: flex-start
+            justify-content: flex-start      
+    &-box
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 320px
+        width: 870px
+        background: $dark-BG
+        border-radius: 6px
+        &__right
+            margin-left: 38px
+        &__level
+            position: relative
+            width: 230px
+            height: 257px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            background: $referral-bg
+            &-circle
+                display: flex
+                justify-content: center
+                align-items: center
+                position: relative
+                height: 130px
+                margin: 16px 0
+            &-h
+                display: flex
+                justify-content: center
+                width: 100%
+                & h5
+                    text-align: center
+                    color: $text-white
+                    font-weight: 600
+                    font-size: 12px
+                    letter-spacing: 3%
+            &-span
+                & div
+                    color: $referral-span
+                    font-weight: 600
+                    font-size: 12px
+                    & span
+                        color: $primary-blue
+            &-text
+                & p
+                    margin-top: 7px
+                    color: $text-white
+                    font-weight: 600
+                    font-size: 14px
+    &-level
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        &__h
+            color: $text-white
+            font-weight: 500
+            font-size: 27px
+        &__p
+            text-transform: uppercase
+            color: $referral-level
+            font-weight: 700
+            font-size: 12px
+    &-information
+        display: flex
+        flex-direction: column
+        width: 520px
+        &__top
+            display: flex
+            justify-content: space-around
+            width: 100%
+            height: 70px
+            &-text
+                margin-left: 12px
+                & span
+                    letter-spacing: 3%
+                    font-size: 16px
+                    font-weight: 600
+                    color: $text-white
+                & p
+                    text-transform: uppercase
+                    font-size: 12px
+                    letter-spacing: 3%
+                    font-weight: 600
+                    color: $input-placeholde
+                    margin-top: 5px     
+        &__item
+            position: relative
+            width: 170px
+            height: 70px
+            display: flex
+            background: $referral-bg
+            justify-content: center
+            align-items: center
+            &:nth-child(2)
+                margin: 0 10px
+        &__line
+            margin-bottom: 18px
+        &__center
+            margin-top: 25px
+            height: 95px
+            &-text
+                display: flex
+                justify-content: space-around
+                width: 100%      
+                & span
+                    font-weight: 600
+                    font-size: 12px
+                    color: $referral-centerSpan
+                    letter-spacing: 3%
+                & p
+                    font-size: 14px
+                    font-weight: 600
+                    letter-spacing: 3%
+                    &:first-child
+                        color: $text-white
+                    &:last-child
+                        color: $primary-blue
+        &__renewal
+            &-text
+                font-size: 12px
+                font-weight: 600
+                color: $referral-text
+                letter-spacing: 3%
+            &-number
+                font-size: 16px
+                font-weight: 600
+                color: $text-white
+                letter-spacing: 3%
+        &__promocode
+            margin-top: 23px
+            width: 482px
+            height: 45px
+            background: $referral-bg
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0 19px
+            border-radius: 3px
+            &-text
+                display: flex
+                & p
+                    font-size: 14px
+                    color: $referral-promocode
+                    letter-spacing: 3%
+                    font-weight: 600
+                    margin-right: 9px
+            &-span
+                color: $text-white
+                font-size: 14px
+                letter-spacing: 3%
+                font-weight: 600
+            &-img
+                display: flex
+                justify-content: space-around
+                align-items: center
+                width: 50px
+            &-safe
+                & a
+                    margin-left: 15px
+    &-bottom
+        margin-top: 20px
+        &__h
+            margin: 10px 0
+        &__box
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-direction: column
+            height: 500px
+            flex-wrap: wrap
+        &__item
+            position: relative
+            width: 48%
+            height: 70px
+            display: flex
+            justify-content: space-around
+            align-items: center
+            margin: 10px 0
+            overflow: hidden
+            background: $referral-item
+            & .primary-border
+                width: 40px
+                height: 40px
+            &-number
+                display: flex
+                justify-content: center
+                align-items: center
+                position: relative
+                & p 
+                    z-index: 2
+                    color: $text-white
+                    font-weight: 700
+                    letter-spacing: 3%
+                    font-size: 14px
+                &::before
+                   content: ''
+                   background: $active-item
+                   width: 30px
+                   height: 30px
+                   position: absolute
+                   border-radius: 50%
+                   z-index: 0
+                   left: 50%
+                   top: 50%
+                   transform: translate(-50%, -50%)
+            &-money
+                & h5
+                    color: $primaryColor
+                    font-size: 14px
+                    font-weight: 600
+                    letter-spacing: 3%
+            &-percentage
+                & h5
+                    color: $referral-itemExtra
+                    font-size: 14px
+                    font-weight: 600
+                    letter-spacing: 3%
+            &-extra
+                & h5
+                    color: $referral-itemExtra
+                    font-size: 14px
+                    font-weight: 600
+                    letter-spacing: 3%
+    &-promocode
+        background: none
+        border: none
+
+
+
+
+
+
+
+
+.center-content__box-arrow-bottom
+    &-left
+        bottom: -28px
+    &-right
+        bottom: -28px
+
+
+
+
+@media (max-width: 1880px)
+    .referral
+        &-box
+            width: 100%
+            &__level
+                width: 30%
+            &__right
+                margin-left: 15px
+        &-information
+            width: 60%
+            &__promocode
+                width: 80%
+@media (max-width: 1605px)
+    
+    .referral
+        &-box
+            width: 100%
+            &__level
+                width: 30%
+            &__right
+                margin-left: 30px
+        &-information
+            width: 60%
+            &__center
+                &-span
+                    margin-left: 15px
+                    
+            &__promocode
+                width: 90%
+                margin-left: 15px
+            &__line
+                & svg
+                    width: 89%
+                    & rect
+                        &::first-child
+                            width: 700px
+@media (max-width: 1440px)
+    .referral   
+        &-box
+            width: 100%     
+            &__right
+                margin-left: 15px
+        &-information
+            width: 60%
+            
+            &__line
+                width: 95%
+                & svg
+                    width: 100%
+            &__center
+                &-span
+                    margin-left: 0  
+                    
+            &__promocode
+                width: 90%
+                margin-left: 0
+@media (max-width: 1240px)
+    .referral   
+        &-bottom
+            &__box
+                flex-wrap: nowrap
+                height: 100%
+            &__item
+                width: 100%
+        &-box
+            width: 100%     
+            height: 100%
+            padding: 37px 0
+            &__right
+                margin-left: 10px
+            &__level
+                width: 30%
+        &-information
+            width: 60%
+            
+            &__item
+                width: 150px
+                margin: 10px
+                &:nth-child(2)
+                    margin: 10px
+            &__top
+                height: 100%
+                flex-wrap: wrap
+                justify-content: flex-start
+                width: 100%
+                flex-shrink: 0
+            &__line
+                width: 95%
+                margin-left: 5px
+            &__center
+                &-span
+                    margin-left: 5px
+                &-line
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    
+            &__promocode
+                width: 90%
+                margin-left: 0
+@media (max-width: 1113px)
+    .referral   
+        &-bottom
+            &__box
+                flex-wrap: nowrap
+                height: 100%
+            &__item
+                width: 100%
+        &-box
+            flex-direction: column
+            width: 100%     
+            height: 100%
+            padding: 37px 0
+            &__right
+                margin-left: 0
+            &__level
+                width: 40%
+        &-information
+            width: 90%
+            
+            &__item
+                width: 150px
+                margin: 10px
+                &:nth-child(2)
+                    margin: 10px
+            &__top
+                height: 100%
+                flex-wrap: nowrap
+                justify-content: flex-start
+                width: 100%
+                flex-shrink: 0
+            &__line
+                width: 95%
+                margin-left: 5px
+            &__center
+                &-span
+                    margin-left: 5px
+                &-line
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    
+            &__promocode
+                width: 90%
+                margin-left: 0
+@media (max-width: 990px)
+    .referral   
+        &-bottom
+            &__box
+                flex-wrap: wrap
+                height: 500px
+            &__item
+                width: 48%
+        &-box
+            width: 100%     
+            height: 100%
+            flex-direction: row
+            padding: 37px 0
+            &__right
+                margin-left: 10px
+            &__level
+                width: 30%
+        &-information
+            width: 60%
+            
+            &__item
+                width: 150px
+                margin: 10px
+                &:nth-child(2)
+                    margin: 10px
+            &__top
+                height: 100%
+                flex-wrap: wrap
+                justify-content: flex-start
+                width: 100%
+                flex-shrink: 0
+            &__line
+                width: 95%
+                margin-left: 5px
+            &__center
+                &-span
+                    margin-left: 5px
+                &-line
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    
+            &__promocode
+                width: 90%
+                margin-left: 0
+@media (max-width: 630px)
+    .referral   
+        &-bottom
+            &__box
+                flex-wrap: nowrap
+                height: 100%
+            &__item
+                width: 100%
+        &-box
+            width: 100%     
+            height: 100%
+            flex-direction: column
+            padding: 37px 0
+            &__right
+                margin-left: 0
+            &__level
+                width: 30%
+        &-information
+            width: 90%
+            
+            &__item
+                width: 170px
+                margin: 10px
+                &:nth-child(2)
+                    margin: 10px
+                & .center-content__box-arrow
+                    display: none
+            &__top
+                height: 100%
+                flex-wrap: nowrap
+                justify-content: flex-start
+                width: 100%
+                flex-shrink: 0
+            &__line
+                width: 95%
+                margin-left: 5px
+            &__center
+                &-span
+                    margin-left: 5px
+                &-line
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    
+            &__promocode
+                width: 90%
+                margin-left: 0
+@media (max-width: 567px)
+    .referral   
+        &-bottom
+            &__box
+                flex-wrap: nowrap
+                height: 100%
+            &__item
+                width: 100%
+        &-box
+            width: 100%     
+            height: 100%
+            flex-direction: column
+            padding: 37px 0
+            &__right
+                margin-left: 0
+            &__level
+                width: 50%
+                min-width: 200px
+        &-information
+            width: 90%
+            
+            &__item
+                width: 200px
+                margin: 10px
+                &:nth-child(2)
+                    margin: 10px
+                & .center-content__box-arrow
+                    display: flex
+            &__top
+                height: 100%
+                flex-wrap: wrap
+                justify-content: center
+                width: 100%
+                flex-shrink: 0
+            &__line
+                width: 95%
+                margin-left: 5px
+            &__center
+                &-span
+                    margin-left: 5px
+                &-text
+                    & span
+                        width: 41%
+                        text-align: center
+                &-line
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    
+            &__promocode
+                width: 90%
+                margin-left: 0

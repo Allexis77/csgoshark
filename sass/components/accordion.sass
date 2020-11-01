@@ -1,0 +1,111 @@
+$faq-gradient: linear-gradient(90deg, #0085FF 3.57%, #00D3FF 95.71%)
+.accordionWrapper
+  padding: 30px
+  background: #202136
+  float: left
+  width: 100%
+  box-sizing: border-box
+
+.accordionItem
+  float: left
+  display: block
+  width: 100%
+  box-sizing: border-box
+  margin: 10px 0
+
+.accordionItemHeading
+  display: flex
+  justify-content: space-between
+  align-items: center
+  cursor: pointer
+  margin: 0px 0px 10px 0px
+  padding: 13px 21px 
+  background: #2B2B43
+  color: #fff
+  width: 100%
+  border-radius: 3px
+  position: relative
+  box-sizing: border-box
+  &-box
+    display: flex
+    align-items: center
+    height: 60px
+    & h2 
+      font-weight: bold
+      font-size: 17px
+      margin-left: 17px
+    
+    & .primary-border
+      width: 51.2px
+      height: 51.2px
+    &__img
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      & img
+        width: 20px
+      &::before
+        content: ''
+        position: absolute
+        width: 38px
+        border-radius: 100%
+        height: 38px
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        background: $faq-gradient
+  &-leftTop__arrow
+    position: absolute
+    left: -25px
+    top: -25px
+  &-rightTop__arrow
+    position: absolute
+    top: -27px
+    right: -24px
+    transform: rotate(90deg)
+  &-leftBottom__arrow
+    position: absolute
+    bottom: -27px
+    left: -24px
+    transform: rotate(-90deg)
+  &-rightBottom__arrow
+    position: absolute
+    bottom: -25px
+    right: -25px
+    transform: rotate(-180deg)
+.close .accordionItemContent
+  height: 0px
+  transition: height 1s ease-out
+  transform: scaleY(0)
+  float: left
+  display: block
+
+.open .accordionItemContent
+  padding: 20px
+  background-color: #fff
+  width: 100%
+  margin: 0px 0px 10px 0px
+  display: block
+  transform: scaleY(1)
+  transform-origin: top
+  transition: transform 0.4s ease
+  box-sizing: border-box
+
+.close .accordionItemImg
+  width: 10px
+  transform: rotate(0deg)
+
+.open
+  .accordionItemHeading
+    margin: 0px
+    border-top-left-radius: 3px
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 0px
+    border-bottom-left-radius: 0px
+    background-color: #2B2B43
+    color: #fff
+
+  .accordionItemImg
+    width: 10px
+    transform: rotate(-270deg)

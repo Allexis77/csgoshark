@@ -1,0 +1,596 @@
+@import "_let"
+.user
+	&__top__left
+		align-items: center
+	&__title__left
+		height: 50px
+		width: 50px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+	&__name
+		color: $primary-blue
+
+
+	&__bottom
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	&__left
+		width: 100%
+		max-width: 35%
+		flex-shrink: 0
+	&__right
+		margin-left: 25px
+		width: 100%
+		max-width: calc(65% - 25px)
+		flex-shrink: 0
+
+	&__info
+		box-sizing: border-box
+		position: relative
+		padding: 0px 25px
+		background: $dark-BG
+		box-shadow: 0px 15px 45px $selectric
+		width: 100%
+		height: 140px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		z-index: 1
+		&:after
+			content: ''
+			position: absolute
+			height: 100%
+			width: 74px
+			background: url('../img/svg/user-info-bg-mini.svg') no-repeat center
+			z-index: -1
+			right: 10px
+			bottom: -25px
+		&:before
+			content: ''
+			position: absolute
+			height: 100%
+			width: 74px
+			background: url('../img/svg/user-info-bg-big.svg') no-repeat center
+			z-index: -1
+			left: 25%
+			top: -15px
+		&__left
+			&__img
+				width: 50px !important
+				height: 50px !important
+		&__right
+			position: relative
+			margin-left: 20px
+		&__name
+			color: $text-white
+			font-size: 18px
+			margin-bottom: 7px
+			font-weight: bold
+		&__balance
+			color: $text-white
+			font-size: 14px
+			font-weight: 500
+			padding-left: 30px
+			background: url('../img/svg/wallet-icon.svg') no-repeat left center
+			height: 25px
+			display: flex
+			align-items: center
+		&__settings
+			position: absolute
+			top: 0
+			right: -20px
+
+	&__referrals
+		position: relative
+		margin-top: 15px
+		margin-bottom: 15px
+		box-sizing: border-box
+		background: $dark-BG
+		padding: 25px
+		&__title
+			& .page__title__right
+				margin-left: -3px
+				padding-top: 2px
+		&__level
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-direction: column
+			align-items: center
+			height: 160px
+			position: relative
+			justify-content: center
+			z-index: 1
+			& svg
+				position: absolute
+				width: 100%
+				height: 100%
+				top: calc(50% + -15px)
+				left: calc(50% + 15px)
+				transform: translate(-50%, -50%)
+				z-index: -2
+			&__number
+				color: $text-white
+				font-size: 27px
+				font-weight: 500
+				margin-bottom: 3px
+			&__text
+				font-weight: bold
+				font-size: 13px
+				text-transform: uppercase
+				color: $referral-level
+			&_to
+				text-align: center
+				margin-top: 5px
+				text-transform: uppercase
+				color: $text-white
+				font-weight: 500
+				font-size: 14px
+		&__money
+			margin-top: 15px
+			text-align: center
+			color: $user-profileRGBA
+			&_has
+				color: $primary-blue
+	&__limits
+		position: relative
+		padding: 25px
+		background: $dark-BG
+		&__title
+			& .page__title__right
+				margin-left: -3px
+				padding-top: 0px
+		&__item
+			margin-top: 15px
+			padding: 15px 0
+			padding-left: 60px
+			background-position: 5px 10px !important
+			&__title
+				color: $text-white
+				font-size: 14px
+			&__subtitle
+				color: $bet-title
+				font-size: 13px
+				margin-top: 3px
+			&__deposit
+				background: url('../img/svg/ic-actions-download.svg') no-repeat center left $user-profileBG
+			&__withdraw
+				background: url('../img/svg/ic-actions-check-simple.svg') no-repeat center left $user-profileBG
+
+	&__trade
+		box-shadow: 0px 15px 45px $selectric
+		box-sizing: border-box
+		background: $dark-BG
+		padding: 25px
+		position: relative
+		&__top
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: space-between
+			&__link
+				padding-right: 25px
+				color: $user-profileGray
+				font-size: 13px
+				position: relative
+				background: url('../img/svg/gray-arrow.svg') no-repeat right center
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0px
+					width: calc(100% - 25px)
+					background: $user-profileGray
+					height: 1px
+					left: 0
+		&__title
+			& .page__title__right
+				padding-top: 0
+				margin-left: -5px
+		&__bottom
+			margin-top: 20px
+			position: relative
+			&__input
+				width: 100%
+				background: $user-profileInput
+				border: 1px solid $user-profile
+				box-sizing: border-box
+				border-radius: 100px
+				height: 45px
+				padding-left: 25px
+				color: $text-white
+				padding-right: 50px
+				&::placeholder
+					color: $referral-promocode
+					font-size: 14px
+					font-weight: 600
+			&__btn
+				top: 0
+				position: absolute
+				width: 45px
+				height: 45px
+				right: 0
+				background: $user-profileGradient
+				border: 1.5px solid $arrowRGBA
+				box-sizing: border-box
+				border-radius: 100px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+	&__tabs
+		margin-top: 30px
+		&__top
+			background: $dark-BG
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			box-sizing: border-box
+			box-shadow: 0px 15px 45px $selectric
+			height: 60px
+			&__item
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				color: $text-white
+				position: relative
+				cursor: pointer
+				&:first-child
+					margin-right: 40px
+					margin-left: -16px
+				& path
+					fill: $user-profilePlaceholder
+				&_active
+					&:after
+						position: absolute
+						content: ''
+						width: 100%
+						width: calc(100% - 46px)
+						height: 2px
+						background: $primary-blue
+						left: calc(50% + 24px)
+						transform: translateX(-50%)
+						bottom: -10px
+						box-shadow: 0 4px 15px $blue-RGBA
+					& path
+						fill: $primary-blue
+				&__img
+					overflow: hidden
+					height: 40px
+					&__history
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						align-items: center
+
+		&__bottom
+			margin-top: 25px
+		&__inventory
+			overflow-y: auto
+			height: 471px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-wrap: wrap
+			// justify-content: space-between
+			& .center-content__box-item
+				margin-left: 0
+				width: 30%
+				min-width: 178px
+				margin-right: 0
+		&__history
+			overflow-y: auto
+			height: 471px
+			flex-direction: column
+			&__table
+				border-collapse: collapse
+			&__heading
+				height: 60px
+				background: $dark-BG
+				box-shadow: 0px 15px 45px $user-itemRGBA
+				& th
+					font-family: Gilroy
+					font-style: normal
+					font-weight: bold
+					font-size: 14px
+					line-height: 17px
+					text-align: center
+					color: $user-profileBorder
+					text-transform: uppercase
+			&__item
+				background: $dark-BG
+				box-shadow: 0px 15px 45px $user-itemRGBA
+				height: 80px
+				margin-top: 10px
+				box-sizing: border-box
+				& td
+					text-align: center
+				&__id
+					color: $text-white
+					font-size: 12px
+					font-weight: bold
+					width: 50px
+				&__object, &__prize
+					& .game-item__prize
+						width: 61px
+						height: 61px
+						margin: 0 auto
+				&__price
+					&__btn
+						margin: 0 auto
+						color: $text-white
+						font-family: Gilroy
+						font-style: normal
+						font-weight: bold
+						font-size: 13px
+						line-height: 16px
+						text-align: center
+						text-shadow: 0px 0px 35px $user-profileGreen
+				&__benefit
+					& .game-item__benefit
+						width: 55px
+						box-sizing: border-box
+						padding: 0
+						margin: 0 auto
+						color: $text-white
+						font-weight: 600
+				&__date
+					font-style: normal
+					font-weight: bold
+					font-size: 12px
+					line-height: 15px
+					color: $text-white
+
+
+
+		&__wrapper
+			padding-right: 10px
+			display: none
+			&_active
+				padding-right: 4px
+				display: flex
+
+.table__spacer
+	height: 15px
+
+.table__spacer_first
+	height: 10px !important
+
+.user__tabs__inventory
+	padding-right: 4px
+	margin: -5px
+	padding-left: 5px
+	margin-top: -6px
+	width: 99.7%
+
+.user__tabs__history
+	width: 99.7%
+	margin-top: -6px
+	padding-top: 3px
+
+.user__tabs__inventory .center-content__box-item
+    margin-left: 0
+    width: 30%
+    min-width: calc(33.33333% - 6px)
+    margin-right: 0
+    margin: 3px
+    margin-bottom: 0
+    margin-top: 5px
+
+.user__tabs__inventory::-webkit-scrollbar
+  width: 7px
+  height: 7px
+  background-color: $chat-UnderLine
+  border-radius: 100px
+
+.user__tabs__inventory::-webkit-scrollbar-thumb
+  background-color: $scrollbar-thumb
+  border-radius: 100px
+
+.user__tabs__history::-webkit-scrollbar
+  width: 7px
+  height: 7px
+  background-color: $chat-UnderLine
+  border-radius: 100px
+
+.user__tabs__history::-webkit-scrollbar-thumb
+  background-color: $scrollbar-thumb
+  border-radius: 100px
+
+.user__tabs__history::-webkit-scrollbar-corner
+	background-color: transparent
+
+
+.level__circle__svg
+	z-index: -1 !important
+	left: calc(50%) !important
+	top: calc(50%) !important
+	transform: translate(-50%,-50%) rotate(-90deg) !important
+#svg
+  circle
+    stroke-linecap: round
+    stroke: $progressBar
+    stroke-width: 6
+
+  #bar
+    stroke: $primary-blue
+    stroke-dasharray: 1000
+    stroke-dashoffset: 880
+
+@media (max-width: 1800px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(50% - 6px)
+
+@media (max-width: 1715px)
+	.right-sidebar-wrapper
+		display: none
+	.craft
+		flex-direction: row
+	.center-content__box-item
+		flex: 0 0 25%
+	.craft__center__right
+		margin-top: 0 
+	.page__subtitle
+		padding-right: 40px
+	.personal-data_mobile
+		display: flex
+		justify-content: space-around
+	.no_authorize_personal-data_mobile
+		margin-bottom: 35px
+		width: 90%
+		padding: 0 35px
+		justify-content: space-between
+	.center-content
+		width: calc(100% - 534px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(25% - 6px)
+		max-width: calc(25% - 6px)
+
+@media (max-width: 1680px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(33.33333% - 6px)
+		max-width: calc(33.33333% - 6px)
+
+@media (max-width: 1330px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(50% - 6px)
+		max-width: calc(50% - 6px)
+
+@media (max-width: 1215px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(50% - 6px)
+		max-width: calc(50% - 6px)
+	.user__bottom
+		flex-direction: column
+		align-items: center
+	.user__info
+		justify-content: center
+	.user__left
+		max-width: 85%
+	.user__right
+		margin-top: 30px
+		margin-left: 0
+		max-width: calc(95%)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(33.33333% - 6px)
+		max-width: calc(33.33333% - 6px)
+@media (max-width: 1100px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(50% - 6px)
+		max-width: calc(50% - 6px)
+@media screen and (max-width: 990px)
+	.user__trade
+		overflow: hidden
+	.center-content
+		width: 100%
+		box-sizing: border-box
+	.user__bottom
+		flex-direction: row
+	.user__left
+		max-width: 35%
+	.user__right
+	    margin-top: 0px
+	    margin-left: 25px
+	    max-width: calc(65% - 25px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(50% - 6px)
+		max-width: calc(50% - 6px)
+	.user__info
+		justify-content: flex-start
+	
+@media (max-width: 750px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(50% - 6px)
+		max-width: calc(50% - 6px)
+	.user__bottom
+		flex-direction: column
+		align-items: center
+	.user__info
+		justify-content: center
+	.user__left
+		max-width: 85%
+	.user__right
+		margin-top: 30px
+		margin-left: 0
+		max-width: calc(95%)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(33.33333% - 6px)
+		max-width: calc(33.33333% - 6px)
+	body
+	    padding-bottom: 130px
+	.user__tabs
+		width: 85%
+		margin: 0 auto
+		margin-top: 30px
+
+@media (max-width: 680px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(50% - 6px)
+		max-width: calc(50% - 6px)
+	.user__tabs__history__heading th
+		padding: 0 13px
+		background: $dark-BG
+	.user__tabs__history__item td
+		background: $dark-BG
+
+@media (max-width: 515px)
+	.user__tabs
+		width: 90%
+
+@media (max-width: 460px)
+	.user__tabs__inventory .center-content__box-item
+		min-width: calc(100% - 6px)
+		max-width: calc(100% - 6px)
+	.user__tabs__top__item:first-child
+		margin-right: 5px
+	.user__tabs__top__item
+		font-size: 13px
+	.page__title
+		font-size: 15px
+
+@media (max-width: 400px)
+	.user__tabs__top__item
+		font-size: 0
+	.user__tabs__top__item_active:after
+		width: 50%
+		left: 50%
+
+@media (max-width: 370px)
+	.user__trade__top__link
+		margin: 0 auto
+		margin-top: 10px
+	.user__trade__top
+		flex-direction: column
+		align-items: unset
+	.user__trade__bottom__input::placeholder
+		font-size: 12px

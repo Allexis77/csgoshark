@@ -1,0 +1,400 @@
+$primary-blue: #00D3FF
+.center-content
+	margin-top: 33px
+	margin-bottom: 33px
+	padding: 0px 27px
+	width: 100%
+	&-top
+		& .nav
+			background: #080828
+			& li, a, span
+				color: #fff
+	&-bottom
+		margin-top: 30px
+		background: #1B1C32
+		padding: 32px 0
+		width: 100%
+		border-radius: 6px
+		max-width: 879px
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		flex-direction: column
+	&__h
+		margin: 0 0 33px 34px
+		& h2 
+			font-weight: bold
+			font-size: 16px
+			color: #ffffff
+	&__box
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		&-item
+			margin: 0 12.5px 25px 12.5px
+			width: 186px
+			min-width: 186px
+			height: 280px
+			cursor: pointer
+			display: flex
+			flex-wrap: wrap
+			background: #17182E
+			display: flex
+			justify-content: center
+			align-items: center
+			position: relative
+			overflow: hidden
+			z-index: 1
+			&-bottom
+				display: flex
+				justify-content: space-between
+				width: 100%
+				padding: 0 21px 32px 15px
+				position: relative
+				flex-direction: column
+				&::before
+					position: absolute
+					width: 186px
+					height: 80px
+					bottom: 0
+					background: url(../../img/svg/dots-items.svg) no-repeat
+					content: ''
+				&::after
+					content: ''
+					background: url(../img/svg/line-craft.svg) center center no-repeat
+					width: 100%
+					height: 2px
+					position: absolute
+					bottom: 0
+					box-shadow: 10px 0 120px 7px $primary-blue
+					left: 50%
+					transform: translateX(-50%)
+					
+			&-text
+				z-index: 3
+				& h4
+					font-weight: bold
+					font-size: 16px
+					color: #ffffff
+					text-align: center
+				& p
+					color: #4F5282
+					font-size: 13px
+					width: 59px
+					font-weight: 500
+			&-price
+				z-index: 3
+				text-align: center
+				width: 100%
+				height: 30px
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-top: 10px
+				& span 
+					color: #fff
+					padding: 7px 18px
+					font-weight: bold
+					background: #000
+					background: linear-gradient(90deg, #0085FF 3.57%, #00D3FF 95.71%)
+					border-radius: 100px
+		&-arrow
+			&-top
+				&-left
+					position: absolute
+					left: -25px
+					top: -25px					
+				&-right
+					position: absolute
+					right: -25px
+					top: -25px
+			&-bottom
+				&-left
+					position: absolute
+					bottom: -25px
+					left: -25px
+					
+				&-right
+					position: absolute
+					bottom: -25px
+					right: -25px
+.craft
+	padding: 25px 15px
+	font-family: 'Gilroy'
+	height: 100%
+	font-weight: 500
+	display: flex
+	align-items: center
+	background: url(../img/svg/crash-bg.svg) right -5px top 5px #17182e
+	position: relative
+	& .center-content__box-arrow-bottom-right, & .center-content__box-arrow-bottom-left
+		bottom: -28px
+
+	&__form
+		flex: 0 0 33%
+	&__right
+		min-height: 240px
+		height: 100%
+		padding-top: 20px
+		position: relative
+		background: #131429
+		margin-left: auto
+		max-width: 270px
+		width: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		flex-direction: column
+		&__price
+			position: relative
+			background: #0D0E20
+			max-width: 140px
+			width: 100%
+			height: 60px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 21px
+			color: $primary-blue
+			&__span
+				color: #fff
+				margin-right: 2px
+		&__title
+			font-size: 13px
+			color: #40415F
+			margin: 13px 0px
+		&__bottom__content
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+	&__upload
+		width: 45px
+		height: 45px
+		padding: 0
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+	&__start
+		padding: 0
+		padding-right: 20px
+		width: 140px
+		height: 45px
+		margin-left: 10px
+		& img
+			position: absolute
+			right: 30px
+			left: unset
+			top: 50%
+			transform: translateY(-50%)
+	&__center
+		border: 24px solid #141527
+		background-size: 608px
+		background-position-y: 56%
+		border-radius: 100%
+		margin: 0 auto
+		position: relative
+		width: 100%
+		max-width: 250px
+		height: 250px
+		display: flex
+		justify-content: center
+		align-items: center
+		z-index: 1
+		flex-shrink: 0
+		&__right
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			width: 100%
+			align-items: center
+		&__svg
+			position: absolute
+			display: block
+			border-radius: 50%
+			width: 260px
+			overflow: visible
+			&_blur
+				filter: blur(15px)
+			&_scale
+				transform: rotateY(180deg)
+	&__left
+		margin-top: 10px
+		max-width: 270px
+		width: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+		&__input
+			font-size: 14px
+			background: #121325
+			border: 1px solid rgba(0, 211, 255, 0.15)
+			box-sizing: border-box
+			box-shadow: 0px 15px 45px rgba(17, 18, 36, 0.45)
+			border-radius: 100px
+			padding: 20px 30px
+			width: 100%
+			color: #fff
+			&::placeholder
+				color: #34354D
+		&__flex__inputs
+			width: 100%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			margin-top: 15px
+			margin-bottom: 15px
+			& input
+				flex: 0 0 48%
+		&__bets
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			width: 100%
+			margin-bottom: 15px
+			&__btn
+				background: #121325
+				border: 1px solid rgba(0, 211, 255, 0.15)
+				box-sizing: border-box
+				height: 35px
+				width: 18%
+				box-shadow: 0px 15px 45px rgba(17, 18, 36, 0.45)
+				border-radius: 100px
+				color: #fff
+				font-size: 11px
+				cursor: pointer
+	&__find
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 50px
+		height: 50px
+		border-radius: 100px
+		padding: 0
+		background: url('../img/svg/search.svg') no-repeat center 5px, linear-gradient(89.2deg,rgba(0,211,255,.25) 1.28%,rgba(0,211,255,0) 51.53%,rgba(0,211,255,.25) 98.73%)
+		position: absolute
+		top: 0
+		right: 0
+		z-index: 8
+.filter
+	position: relative
+	width: 100%
+	& .selectric-wrapper > .selectric
+		font-size: 14px
+		background: #121325
+		border: 1px solid rgba(0, 211, 255, 0.15)
+		box-sizing: border-box
+		box-shadow: 0px 15px 45px rgba(17, 18, 36, 0.45)
+		border-radius: 100px
+		width: 100%
+		height: 50px
+		color: #fff
+		padding-left: 20px
+		margin-bottom: 15px
+		& .button
+			right: 54px
+
+
+.range-wrap
+  position: relative
+  margin: 0
+  margin-top: 15px
+  margin-bottom: 15px
+
+.range
+  width: 100%
+
+.bubble
+  background: url(../img/svg/range-bg.svg) no-repeat center
+  color: $primary-blue
+  padding: 4px 12px
+  position: absolute
+  border-radius: 4px
+  width: 30px
+  height: 26px
+  font-size: 10px
+  display: flex
+  align-items: center
+  justify-content: center
+  left: 50%
+  padding-bottom: 9px
+  top: -33px
+  -webkit-transform: translateX(-50%)
+  -ms-transform: translateX(-50%)
+  transform: translateX(-50%)
+
+.center-content__box-item-active::before
+	content: ''
+	background: #eb01a5
+	background-image: url("../img/svg/done-icon.svg")
+	background-image: url("../img/svg/done-icon.svg"), linear-gradient(90deg, #0085FF 3.57%, #00D3FF 95.71%)
+	background-repeat: no-repeat
+	background-position: center 
+	
+
+.center-content__box-item-text p
+	margin: 10px 0
+
+#input-send::-webkit-scrollbar
+  width: 7px
+  height: 7px
+  background-color: #2c3053
+  border-radius: 100px
+
+#input-send::-webkit-scrollbar-thumb
+  background-color: #444978
+  border-radius: 100px
+
+#input-send::-webkit-scrollbar
+  width: 7px
+  height: 7px
+  background-color: #2c3053
+  border-radius: 100px
+
+#input-send::-webkit-scrollbar-thumb
+  background-color: #444978
+  border-radius: 100px
+
+#input-send::-webkit-scrollbar-corner
+	background-color: transparent
+
+.game-mode
+	background: #080828
+.right-sidebar__chat
+	background: #080828
+.center-content__box-item
+	background: #111133
+.center-content-bottom
+	background: #080828
+

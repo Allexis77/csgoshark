@@ -1,0 +1,82 @@
+@import "./_vars"
+@import "./_fonts"
+@import "./selectric"
+@import "./scroll.css"
+@import "_let"
+
+body
+    display: flex
+.faq
+	&__top
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+
+.treatment__btn__img
+	left: 34px
+
+.treatment__btn-a
+	color: $primary-blue
+.treatment__btn
+    width: 228px
+    height: 55px
+    padding: 0
+    padding-left: 35px
+    font-size: 14px
+    font-weight: bold
+    text-transform: uppercase
+
+
+@import "./components/center-content"
+@import "./components/navigation"
+@import "./components/sidebar"
+@import "./components/accordion"
+@import "./components/modal"
+
+@import "./_media"
+
+.open .accordionItemContent
+	color: $accordionItemContent
+	font-size: 14px
+	font-weight: 500
+	background: $dark-BG
+	font-family: "Gilroy", sans-serif
+
+.accordionItemHeading
+	background: $dark-BG
+	position: relative
+.open .accordionItemHeading
+	background: $dark-BG
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		left: 0
+		
+		height: 1px
+		background: #2F304E
+		bottom: 0
+.accordionWrapper
+	background: #131331
+@media (max-width: 1605px)
+	.nav
+		overflow: visible
+@media (max-width: 768px)
+	.center-content
+		overflow-x: unset
+	.treatment__btn
+		display: flex
+		font-size: 0
+		width: 55px
+		padding-left: 0
+		justify-content: center
+		align-items: center
+		&__img
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
