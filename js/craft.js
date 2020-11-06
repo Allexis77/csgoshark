@@ -65,6 +65,8 @@ function updateRatio(event) {
 
 }
 
+
+// craft brain
 $('.craft__upload').on('click', function(e) {
   e.preventDefault();
   $('.craft__center__svg').toggleClass('craft__center__svg_scale')
@@ -149,3 +151,19 @@ $('.craft__start').on('click', function() {
 
 })
 
+// show select image on craft
+if ($('.craft__center').length) {
+  $('.center-content-bottom .center-content__box-item').on('click', function() {
+
+    if ($(this).hasClass('center-content__box-item-active')) {
+      $('.craft__center .craft__center-img').attr('src', '')
+      $('.spinner-grow').css('display', 'block')
+    } else {
+      let currentImg = $(this).find('.center-content__box-item-img img').attr('src');
+      $('.craft__center .craft__center-img').attr('src', currentImg)
+      $('.spinner-grow').css('display', 'none')
+    }
+
+
+  })
+}

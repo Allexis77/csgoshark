@@ -1,5 +1,22 @@
 (function ($){
 
+if (localStorage.getItem('white-theme')) {
+  $('body').addClass('is-white');
+  if ($('#selectAll').length) {
+    $('.settings__theme__switch #selectAll').prop('checked', true);
+  }
+}
+
+$('.settings__theme__switch #selectAll').on('change', function() {
+  if ($('.settings__theme__switch #selectAll:checked').length > 0) {
+    $('body').addClass('is-white');
+    localStorage.setItem('white-theme', 'true');
+  } else {
+    $('body').removeClass('is-white');
+    localStorage.removeItem('white-theme');
+  }
+})
+
   $.fn.bekeyProgressbar = function(options){
 
       options = $.extend({

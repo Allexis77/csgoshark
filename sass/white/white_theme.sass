@@ -1,8 +1,8 @@
 @import "../_let"
 $primary-blue_white: #00D3FF
-$primary_white: #fff
-$dark-Theme_white: #F0EEFC
-$gamer-winsInfoBG_white: #E8E5F8
+$primary_white: #fffafa
+$dark-Theme_white: #ece9ff
+$gamer-winsInfoBG_white: #e2ddff
 $active-item_white: linear-gradient(90deg, #0085FF 3.57%, $primary-blue_white 95.71%)
 
 $primary_icon_fill_white: #C3BCEA
@@ -23,7 +23,7 @@ $gray_bg: #E3E3F8
 
 $range_bg: #D7D7F3
 
-$message_bg: #E0DDF0
+$message_bg: #fffafa
 
 $message_color: #A19BC0
 $textarea-message-color: #B1ACC7
@@ -125,8 +125,8 @@ body.is-white
 			opacity: 0.3
 			background-size: 65px
 			transform: translateX(-30px)
-	& .link__text
-		color: $link_color
+	& .nav__li:not(.nav_active) .link__text
+		color: $link_color !important
 	& .nav__li svg > path 
 		fill: $link_color
 	& .hidden-menu
@@ -153,6 +153,8 @@ body.is-white
 		border-color: $primary_white
 	& .win__regime__wrapper
 		border-color: $primary-blue
+		& .win__regime:not(.win__regime_active)
+			color: #000
 	& .win__regime path
 		fill: $primary_icon_fill_white
 	& .craft__upload path
@@ -213,9 +215,9 @@ body.is-white
 		background: $range_bg
 	& .logo, .top-bar_mobile__logo
 		background: url('../img/white/img/logo.svg') no-repeat
-		background-position-x: -21px
-		background-position-y: -21px
-		background-size: 207px
+		background-position-x: 0px
+		background-position-y: 12px
+		background-size: 215px
 	& .logo a:after, .top-bar_mobile__logo a:after
 		display: none
 	& .right-sidebar__chat-link
@@ -810,12 +812,3 @@ body.is-white
 		& .treatment__btn:after
 			left: 50%
 			transform: translate(-50%, -50%)
-
-@media (max-width: 390px)
-	body.is-white
-		.top-bar_mobile__logo
-			margin-right: 0
-			background-position-x: -16px
-			background-position-y: -11px
-			background-size: 157px
-			width: 100px
